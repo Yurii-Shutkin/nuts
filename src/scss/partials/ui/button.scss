@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "../../utils/mixins.scss" as *;
+@use "../../utils/vars.scss" as *;
+
+.main-btn {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+    background: map.get($colors, green);
+    padding: 13px 23px;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+.inline-btn {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: map.get($colors, green);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}

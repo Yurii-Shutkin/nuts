@@ -1,0 +1,53 @@
+@use "sass:map";
+@use "../utils/vars.scss" as *;
+@use "../utils/mixins.scss" as *;
+
+.nav {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: map.get($colors, dark-blue);
+    padding: 20px 0;
+
+    @include respond-to(laptop) {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        width: 100%;
+        max-width: 1138px;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        gap: 19px;
+    }
+
+    &__item {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -17px;
+            height: 3px;
+            width: 100%;
+            background: map.get($colors, green);
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            color: map.get($colors, green);
+            transition: color .3s ease;
+
+            &::after {
+                transform: translateX(-50%) scaleX(1);
+            }
+        }
+
+
+    }
+}

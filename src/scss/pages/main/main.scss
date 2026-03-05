@@ -1,0 +1,10 @@
+@use "sass:map";
+@use "../../reuse.scss";
+@use "../../utils/vars.scss" as *;
+@use "../../utils/mixins.scss" as *;
+@use "../../partials/header.scss";
+@use "../../partials/ui/button.scss";
+
+body {
+    font-family: 'Raleway', sans-serif;
+}

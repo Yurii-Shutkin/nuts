@@ -1,0 +1,46 @@
+@use "sass:map";
+@use "../../utils/mixins.scss" as *;
+@use "../../utils/vars.scss" as *;
+
+.burger {
+    width: 100%;
+    height: 20px;
+    max-width: 19px;
+    display: none;
+    margin-left: 2px;
+    margin-bottom: 7px;
+    cursor: pointer;
+
+    @include respond-to(laptop) {
+        display: block;
+    }
+
+    &__lines {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 19px;
+        height: 2.6px;
+        background-color: #000;
+        bottom: -9px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 13px;
+            height: inherit;
+            background: inherit;
+            top: 8px;
+            clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: inherit;
+            height: inherit;
+            background: inherit;
+            top: -7px;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+@use "sass:map";
+@use "../utils/vars.scss" as *;
+@use "../utils/mixins.scss" as *;
+
+
+.container {
+    padding: 0 315px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    @media(max-width: 1740px) {
+        padding: 0 90px;
+    }
+
+    @media(max-width: 1660px) {
+        padding: 0 60px;
+    }
+
+    @include respond-to (tablet-l) {
+        padding: 0 30px;
+    }
+
+    @include respond-to (mobile) {
+        padding: 0 10px;
+    }
+}
+
+.icon {
+    width: 16px;
+    height: 6px;
+
+    &-social {
+        width: 16px;
+        height: 13px;
+
+        &:hover {
+            color: map.get($colors, salad);
+            transition: color .3s ease;
+        }
+    }
+}
+
+.select {
+    &__wrapper {}
+
+    &__control {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1px;
+        font-size: 13px;
+
+        span {
+            margin-right: 5px;
+            font-size: 13px;
+        }
+    }
+
+    &__arrow {
+        width: 8px;
+        height: 6px;
+        color: map.get($colors, salad);
+        transition: transform .3s ease;
+
+        &.active {
+            transform: rotate(180deg);
+            transition: transform .3s ease;
+        }
+    }
+
+    &__dropdown {
+        display: flex;
+        padding-top: 7px;
+        flex-direction: column;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        font-size: 13px;
+        transition: opacity .3s ease;
+        gap: 4px;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity .3s ease;
+        }
+    }
+
+    &__option {
+        &:hover {
+            color: map.get($colors, salad);
+            transition: color .3s ease;
+        }
+    }
+}

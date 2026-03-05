@@ -1,0 +1,173 @@
+@use "sass:map";
+@use "../utils/mixins.scss" as *;
+@use "../utils/vars.scss" as *;
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform .6s ease;
+
+    &__container {
+        padding: 0 10px;
+    }
+
+    &__close-btn {
+        position: absolute;
+        right: 11px;
+        top: 21px;
+        cursor: pointer;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            color: map.get($colors, dark-blue);
+        }
+    }
+
+    &__logo {
+        padding: 7px 0;
+
+        a {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+
+            img {
+                max-width: 34px;
+                margin-right: 9px;
+            }
+
+            span {
+                font-family: 'Raleway', sans-serif;
+                font-weight: 900;
+                font-size: 12px;
+                width: 100%;
+                max-width: 115px;
+                letter-spacing: 0.2px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .user-coner {
+        background: map.get($colors, bg1);
+    }
+
+    &__user-coner {
+        display: flex;
+        justify-content: space-between;
+        padding: 11px 0;
+        margin-bottom: 6px;
+    }
+
+    .auth {
+        @include respond-to (laptop) {
+            display: flex;
+        }
+
+        &__btn {
+            display: flex;
+            align-items: center;
+            margin-right: 29px;
+            gap: 8px;
+
+            &::after {
+                bottom: -3px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &__user-icon {
+            width: 13px;
+            height: 13px;
+        }
+    }
+
+    .socials {
+        gap: 22px;
+    }
+
+    &__nav {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        color: map.get($colors, dark-blue);
+
+        &-item {
+            height: 46.5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &:hover {
+                background: map.get($colors, green);
+                color: #fff;
+                font-weight: 700;
+                transition: color .3s ease,
+                    background .3s ease;
+            }
+
+            &:last-child {
+                .sidebar__nav-item-link {
+                    border-bottom: none;
+                }
+            }
+
+            &-link {
+                display: block;
+                padding: 14px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+            }
+        }
+    }
+
+    &__banner {
+        position: relative;
+        background-image: url('/img/sidebar-banner.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-family: 'Raleway', sans-serif;
+        color: #fff;
+        text-align: center;
+        padding: 20vh 0;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba($color: #000000, $alpha: 45%);
+        }
+
+        &-title {
+            position: relative;
+            z-index: 1;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        &-desc {
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            font-size: 15px;
+            font-weight: 600;
+            width: 100%;
+            max-width: 250px;
+        }
+    }
+}

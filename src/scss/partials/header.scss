@@ -1,0 +1,360 @@
+@use "sass:map";
+@use "../utils/mixins.scss" as *;
+@use "../utils/vars.scss" as *;
+@use "./ui/burger.scss";
+@use "./nav.scss";
+@use "./sidebar.scss";
+
+.header {
+    position: relative;
+
+    .head {
+        padding: 12px 0;
+        background: map.get($colors, bg1);
+
+        @include respond-to(laptop) {
+            padding: 12px 0 1px 0;
+        }
+
+        &__call-request {
+            display: none;
+            align-items: center;
+            padding-left: 2px;
+
+            svg {
+                width: 10px;
+                height: 10px;
+                color: map.get($colors, green);
+                margin-right: 6px;
+            }
+
+            &-btn {
+                margin-left: 24px;
+            }
+
+            @include respond-to (laptop) {
+                display: flex;
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include respond-to(laptop) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .socials {
+            @include respond-to (laptop) {
+                display: none;
+            }
+        }
+
+        &__message {
+            font-size: 14px;
+            font-weight: 600;
+            color: map.get($colors, green);
+            margin-left: 187px;
+            letter-spacing: 0.8px;
+
+            @media(max-width: 1660px) {
+                margin-left: 0;
+            }
+
+            @include respond-to(laptop) {
+                display: none;
+            }
+
+            &--mb {
+                display: none;
+                text-align: center;
+                padding: 7px 0;
+                letter-spacing: 0;
+
+                @include respond-to(laptop) {
+                    display: block;
+                }
+            }
+        }
+
+        .user-coner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .auth {
+            @include respond-to (laptop) {
+                display: none;
+            }
+        }
+
+        .lang {
+            margin-left: 49px;
+
+            .select__dropdown {
+                background: #fff;
+                z-index: 1;
+                width: 100%;
+                max-width: 20px;
+            }
+
+            @include respond-to (mobile) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 11px 8px 10px 14px;
+                border: 1px solid map.get($colors, salad);
+            }
+        }
+    }
+
+    &__grid {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 20px;
+        background: #fff;
+        padding: 16px 0;
+
+        &-wrap {
+            border-bottom: 1px solid map.get($colors, bg1);
+        }
+
+        @include respond-to(laptop) {
+            align-items: center;
+            padding: 8px 0;
+        }
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 496px;
+
+        @include respond-to(laptop) {
+            max-width: fit-content;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            @include respond-to(laptop) {
+                flex-direction: column;
+                width: 100%;
+                max-width: 100px;
+                text-align: center;
+                margin-left: 10px;
+            }
+        }
+
+        span {
+            width: 100%;
+            max-width: 155px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800;
+            font-size: 15px;
+            letter-spacing: 0.2px;
+
+            @include respond-to(laptop) {
+                font-size: 11px;
+            }
+        }
+
+        @include respond-to(laptop) {
+            img {
+                max-width: 29px;
+            }
+        }
+    }
+
+    &__center {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 700px;
+
+        @include respond-to (laptop) {
+            display: none;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 10px;
+        margin-right: 32px;
+
+        @include respond-to (laptop) {
+            display: none;
+        }
+
+        &-icon {
+            color: #fff;
+            width: 31px;
+            height: 31px;
+            border-radius: 50%;
+            background: map.get($colors, green);
+            display: flex;
+            align-items: center;
+
+            svg {
+                width: 17px;
+                height: 17px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__tel {
+        &-block {
+            width: 100%;
+            max-width: 219px;
+            min-width: 150px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-number {
+            letter-spacing: 0.6px;
+
+            @include respond-to(laptop) {
+                letter-spacing: 0;
+            }
+
+            span {
+                font-weight: 600;
+                color: map.get($colors, green);
+                line-height: 1.4;
+            }
+        }
+    }
+
+    &__call-request {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        &-btn {
+            margin-top: 3px;
+        }
+
+        &-msg {
+            display: block;
+            width: 145px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            color: map.get($colors, grey);
+            letter-spacing: 0.2px;
+            line-height: 1.2;
+            margin-top: 5px;
+        }
+    }
+
+    &__tel-number {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    &__cart {
+        margin-top: 10px;
+        margin-right: 5px;
+        min-width: 24px;
+        cursor: pointer;
+
+        @include respond-to(laptop) {
+            margin-bottom: 18px;
+            margin-right: 5px;
+        }
+
+        &-icon {
+            display: block;
+            width: 100%;
+            max-width: 28px;
+            position: relative;
+            color: map.get($colors, green);
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            &::after {
+                position: absolute;
+                content: '0';
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 8px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: map.get($colors, salad);
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                right: -5px;
+            }
+        }
+    }
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+
+    &__user-icon {
+        display: inline-block;
+
+        .icon {
+            height: 11px;
+            color: map.get($colors, salad);
+        }
+    }
+
+    &__btn {
+        position: relative;
+        margin-right: 26px;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            left: 50%;
+            background: map.get($colors, salad);
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            &::after {
+                transform: translateX(-50%) scaleX(1);
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
