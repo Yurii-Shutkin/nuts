@@ -4,6 +4,7 @@
 @use "../../utils/mixins.scss" as *;
 @use "../../partials/header.scss";
 @use "../../partials/ui/button.scss";
+@use "./hero.scss";
 
 body {
     font-family: 'Raleway', sans-serif;
