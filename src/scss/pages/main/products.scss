@@ -29,7 +29,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 50px;
         column-gap: 30px;
-        margin-bottom: 70px;
+        margin-bottom: 20px;
 
         @include respond-to (laptop-m) {
             grid-template-columns: 1fr 1fr;
