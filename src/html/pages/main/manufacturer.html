@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="manufacturer__wrap">
+        <div class="manufacturer__leftside">
+            <h3 class="manufacturer__title">
+                О производителе
+            </h3>
+            <div class="manufacturer__desc">
+                <p>
+                    <span>
+                        Сельскохозяйственный обслуживающий кооператив
+                        “Орех Причерноморья”
+                    </span> выращивает смешанные сады
+                    ореха грецкого с фундуком, а также ореха грецкого
+                    с шиповником, на площади более 150 гектаров.
+                </p>
+                <p>
+                    Помимо этого кооператив занимается выращиванием
+                    посадочного материала, саженцов привитого и непривитого
+                    грецкого ореха, фундука и шиповника.
+                </p>
+            </div>
+            <button type="button" class="manufacturer__btn transparent-btn">
+                Подробнее
+            </button>
+        </div>
+        <div class="manufacturer__rightside">
+            <div class="manufacturer__video-slider">
+                <div class="manufacturer__img-preview-wrap">
+                    <picture class="manufacturer__img-preview">
+                        <img src="/img/main/manufacturer-video-preview.png" alt="preview">
+                    </picture>
+                    {{> partials/play-icon }}
+                </div>
+                <video class="manufacturer__video" src="/video/walnut2-o.mp4" controls></video>
+                <div class="manufacturer__slider-controls">
+                    <svg class="manufacturer__slider-icon manufacturer__slider-icon--left">
+                        <use href="#icon-slider-arrow"></use>
+                    </svg>
+                    <svg class="manufacturer__slider-icon manufacturer__slider-icon--right">
+                        <use href="#icon-slider-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

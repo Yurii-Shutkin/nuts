@@ -14,6 +14,7 @@
     border-radius: 50%;
     transition: background .3s ease,
         border-color .3s ease;
+    cursor: pointer;
 
     .triangle {
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%);

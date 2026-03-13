@@ -2,7 +2,7 @@
 
 .products {
     font-family: "Raleway", 'sans-serif';
-    padding-bottom: 90px;
+    padding-bottom: 45px;
 
     &__header {
         margin-bottom: 63px;
@@ -11,6 +11,7 @@
 
     &__title {
         margin-bottom: 29px;
+        text-align: center;
     }
 
     &__desc {
@@ -40,5 +41,10 @@
             grid-template-columns: 1fr;
 
         }
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto;
     }
 }
