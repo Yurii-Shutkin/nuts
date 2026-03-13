@@ -2,7 +2,6 @@
 @use "../utils/vars.scss" as *;
 @use "../utils/mixins.scss" as *;
 
-
 .container {
     padding: 0 315px;
     width: 100%;
@@ -31,6 +30,21 @@ h1 {
     font-weight: 800;
     font-size: 62px;
     color: #fff;
+
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+    color: map.get($colors, dark-blue);
+
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 18px;
+    color: map.get($colors, dark-blue);
 }
 
 .hero {

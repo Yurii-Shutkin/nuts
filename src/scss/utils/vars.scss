@@ -2,11 +2,16 @@
 
 $colors: (
     bg1: #F5F5F550,
+    bg2: #fcfcfc,
     green: #337D5A,
     salad: #93B474,
     dark-blue: #1A2F3F,
     grey: #8A8A8A,
+    red-flag: #DD133B,
+    orange-flag: #E1843E,
     overlay: rgba(0, 0, 0, 0.45),
+    border: rgba(0, 0, 0, 0.08),
+    slider-arrow: #c4c4c4,
 );
 
 $breakpoints: (

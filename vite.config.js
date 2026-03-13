@@ -3,7 +3,8 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import handlebars from 'vite-plugin-handlebars';
 import { createHtmlPlugin } from 'vite-plugin-html';
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import { hulakPlugins } from 'vite-plugin-hulak-tools';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,6 +23,13 @@ export default defineConfig({
 
   plugins: [
     createHtmlPlugin(),
+
+    hulakPlugins({
+      enableHandlebars: true,
+      handlebarsOptions: {
+        partialDirectory: 'src/html/partials'
+      }
+    }),
 
     createSvgIconsPlugin({
       iconDirs: [path.resolve(process.cwd(), 'public/img/icons/')],

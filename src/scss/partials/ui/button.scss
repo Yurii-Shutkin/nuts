@@ -8,9 +8,19 @@
     font-size: 13px;
     color: #fff;
     background: map.get($colors, green);
-    padding: 13px 23px;
+    padding: 12px 22px;
     cursor: pointer;
     text-wrap: nowrap;
+    border: 1px solid map.get($colors, green);
+
+
+    &:hover,
+    &:active {
+        background: #fff;
+        color: map.get($colors, green);
+        transition: background .3s ease,
+            color .3s ease;
+    }
 }
 
 .inline-btn {
@@ -20,4 +30,20 @@
     color: map.get($colors, green);
     text-decoration: underline;
     text-underline-offset: 5px;
+}
+
+.transparent-btn {
+    font-weight: 700;
+    font-size: 15px;
+    border: 2px solid map.get($colors, green);
+    color: map.get($colors, green);
+    padding: 15px 28px;
+
+    &:hover,
+    &:active {
+        color: #fff;
+        background: map.get($colors, green);
+        transition: background .3s ease,
+            color .3s ease;
+    }
 }

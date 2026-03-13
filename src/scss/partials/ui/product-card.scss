@@ -1,0 +1,315 @@
+@use "sass:map";
+@use "../../utils/vars.scss" as *;
+
+.product-card {
+    cursor: pointer;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 410px;
+    border: 1px solid map.get($colors, border);
+    height: auto;
+    max-height: 534px;
+    transition: border .3s ease;
+
+    &:hover {
+        border: 1px solid map.get($colors, salad);
+        transition: border .3s ease;
+    }
+
+    &__img-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        background: map.get($colors, bg2);
+        height: auto;
+        max-height: 278px;
+        padding: 21px 0 23px 0;
+        margin-bottom: 20px;
+
+        &:hover {
+
+            .product-card__search-icon,
+            .product-card__slider-arrows {
+                opacity: 1;
+                transition: opacity .3s ease;
+            }
+        }
+    }
+
+    &__img {
+        margin: 0 auto;
+    }
+
+    &__flag-wrap {
+        position: absolute;
+        top: 20px;
+        left: -2px;
+    }
+
+    &__flag-icon {
+        position: relative;
+
+        svg {
+            width: 82px;
+            height: 32px;
+        }
+
+        &--red {
+            color: map.get($colors, red-flag);
+        }
+
+        &--orange {
+            color: map.get($colors, orange-flag);
+
+        }
+
+        span {
+            position: absolute;
+            color: #fff;
+            font-weight: 800;
+            font-size: 10px;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__search-icon {
+        position: absolute;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity .3s ease;
+        z-index: 2;
+
+        &:hover {
+            .product-card__search-icon--outer {
+                border: 1px solid map.get($colors, green);
+                background: rgba(255, 255, 255, 0.75);
+                transition: background .3s ease;
+            }
+
+            .product-card__search-icon--inner {
+                background: none;
+                transition: background .3s ease;
+
+
+                svg {
+                    color: map.get($colors, green);
+                    transition: color .3s ease;
+                }
+            }
+        }
+
+        &--outer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 55px;
+            height: 55px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            transition: background .3s ease;
+
+        }
+
+        &--inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            background: map.get($colors, salad);
+            border-radius: 50%;
+            transition: background .3s ease;
+
+            svg {
+                width: 19px;
+                height: 19px;
+                color: #fff;
+                transition: color .3s ease;
+            }
+        }
+    }
+
+    &__slider-arrows {
+        width: 100%;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: color .3s ease,
+            opacity .3s ease;
+        z-index: 1;
+    }
+
+    &__slider-arrow {
+        width: 23px;
+        height: 20px;
+        color: map.get($colors, slider-arrow);
+
+        &:hover {
+            color: map.get($colors, green);
+            transition: color .3s ease;
+        }
+
+        &--right {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__info {
+        --p: 22px;
+        text-align: left;
+        padding: 0 var(--p);
+    }
+
+    &__name {
+        margin-bottom: 7px;
+    }
+
+    &__number {
+        font-family: "Montserrat", "sans-serif";
+        font-weight: 500;
+        display: block;
+        font-size: 15px;
+        letter-spacing: 0.01em;
+        color: map.get($colors, grey);
+        margin-bottom: 11px;
+    }
+
+    &__desc {
+        display: block;
+        width: 100%;
+        max-width: 230px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.22;
+        color: #000;
+        margin-bottom: 17px;
+    }
+
+    &__aux-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 17px;
+    }
+
+    &__weight-info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__weight {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.22;
+
+        span {
+            display: block;
+            font-weight: 600;
+            color: map.get($colors, green);
+        }
+    }
+
+    &__scales-icon {
+        width: fit-content;
+        margin-bottom: 5px;
+
+        svg {
+            width: 18px;
+            height: 18px;
+            color: map.get($colors, green);
+        }
+    }
+
+    &__package-info {
+        display: flex;
+        margin-right: 8px;
+        gap: 13px;
+    }
+
+    &__package {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.22;
+        letter-spacing: 0.9px;
+
+        span {
+            display: block;
+            font-weight: 700;
+            color: map.get($colors, green);
+
+        }
+    }
+
+    &__package-icon {
+        width: fit-content;
+        margin-top: 6px;
+
+        svg {
+            width: 12px;
+            height: 17px;
+            color: map.get($colors, green);
+        }
+    }
+
+    &__price-border {
+        margin: 0 calc(-1 * var(--p));
+        border-top: 1px solid map.get($colors, border);
+
+    }
+
+    &__price-wrap {
+        padding: 14px 0;
+    }
+
+    &__price-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__price {
+        font-family: "Montserrat", "sans-serif";
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    &__price-label {
+        margin-right: 4px;
+    }
+
+    &__actual-price {
+        font-weight: 600;
+        font-size: 20px;
+        color: map.get($colors, green);
+        margin-right: 3px;
+
+        span {
+            font-size: 15px;
+        }
+    }
+
+    &__old-price {
+        font-weight: 500;
+        font-size: 16px;
+        color: map.get($colors, grey);
+        text-decoration: line-through;
+        text-decoration-thickness: 1px;
+    }
+
+    &__button {
+        padding: 13px 38px;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}

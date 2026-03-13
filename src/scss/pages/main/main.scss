@@ -5,7 +5,11 @@
 @use "../../partials/header.scss";
 @use "../../partials/ui/button.scss";
 @use "./hero.scss";
+@use "./products.scss";
+@use "../../partials/ui/product-card.scss";
+@use "../../partials/product-card-modal.scss";
 
 body {
     font-family: 'Raleway', sans-serif;
+    position: relative;
 }

@@ -7,7 +7,7 @@
     font-weight: 500;
     font-size: 15px;
     color: map.get($colors, dark-blue);
-    padding: 20px 0;
+    padding: 20px 0 16px 0;
 
     @include respond-to(laptop) {
         display: none;
