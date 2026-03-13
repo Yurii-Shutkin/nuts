@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const scaleIcon = document.querySelectorAll('.product-card__search-icon');
 const productCardImg = document.querySelectorAll('.product-card__img')
 const modal = document.querySelector('.product-card__modal');
@@ -8,6 +9,7 @@ const modalOverlay = document.querySelector('.product-card__modal-overview');
 
 scaleIcon.forEach(el => {
   el.addEventListener('click', () => {
+    body.style.overflow = 'hidden';
     const parent = el.closest('.product-card__img-wrap');
     const img = parent.querySelector('.product-card__img').cloneNode(true);
     imgWrap.innerHTML = '';
@@ -23,9 +25,11 @@ scaleIcon.forEach(el => {
 closeBtn.addEventListener('click', () => {
   modal.style.visibility = 'hidden';
   modal.style.opacity = '0';
+  body.style.overflow = 'auto';
 });
 
 modalOverlay.addEventListener('click', () => {
   modal.style.visibility = 'hidden';
   modal.style.opacity = '0';
+  body.style.overflow = 'auto';
 });
