@@ -5,3 +5,4 @@ import './videoHandler.js';
 import '@/js/partials/productCardModal.js';
 import './manufacturer.js';
 import './swiper.js';
+import './countAnim.js';
