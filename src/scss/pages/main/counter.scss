@@ -1,0 +1,49 @@
+@use 'sass:map';
+@use "../../utils/vars.scss" as *;
+@use "../../utils/mixins.scss" as *;
+
+.counter {
+    padding: 73px 0;
+
+    &__grid {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 42px;
+        padding: 0 0 0 20px;
+
+        @include respond-to (laptop-m) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include respond-to (tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__head {
+        font-family: "Montserrat", 'sans-serif';
+        display: block;
+        font-weight: 800;
+        font-size: 72px;
+        letter-spacing: 0.01em;
+        color: map.get($colors, dark-blue);
+        margin-bottom: 9px;
+
+        sup {
+            position: relative;
+            top: -14px;
+            left: 4px;
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 0.05em;
+        }
+    }
+}
