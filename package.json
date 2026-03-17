@@ -16,5 +16,8 @@
     "vite-plugin-html": "^3.2.2",
     "vite-plugin-hulak-tools": "^3.0.0",
     "vite-plugin-svg-icons": "^2.0.1"
+  },
+  "dependencies": {
+    "swiper": "^12.1.2"
   }
 }
