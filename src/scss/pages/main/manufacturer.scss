@@ -96,6 +96,21 @@
         }
     }
 
+
+    &__swiper-wrap {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__swiper {
+        width: 100%;
+
+        height: 400px;
+
+    }
+
     &__video-slider {
         position: relative;
         width: 100%;
@@ -105,9 +120,9 @@
         position: relative;
         transition: opacity .3s ease,
             visibility .3s ease;
+        z-index: 2;
 
         &--unactive {
-            // display: none;
             visibility: hidden;
             opacity: 0;
 
@@ -123,18 +138,7 @@
         transform: translate(-50%, -50%);
     }
 
-    &__video {
-        display: none;
-        opacity: 0;
 
-        &--active {
-            position: absolute;
-            display: block;
-            opacity: 1;
-            top: 0;
-            height: 100%;
-        }
-    }
 
     &__slider-controls {
         position: absolute;
@@ -147,9 +151,12 @@
         width: 141px;
         height: 58px;
         background: map.get($colors, green);
+        z-index: 9999;
 
-        &--active {
-            // bottom: unset;
+        @include respond-to (tablet-l) {
+            padding: 0 10px;
+            width: 100px;
+            height: 35px;
         }
     }
 
