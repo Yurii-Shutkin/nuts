@@ -7,3 +7,4 @@ import './manufacturer.js';
 import './swiper.js';
 import './countAnim.js';
 import './videoBlock.js';
+import '../../partials/ecoHeroSlider.js';

@@ -1,0 +1,108 @@
+@use "sass:map";
+@use "../utils/vars.scss" as *;
+@use "../utils/mixins.scss" as *;
+
+.eco-hero {
+    &__wrap {
+        position: relative;
+    }
+
+    &__bg {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: map.get($colors, overlay);
+            z-index: 1;
+        }
+    }
+
+    &__swiper {
+        @include respond-to (tablet-l) {
+            height: 300px;
+
+            .swiper-slide {
+                img {
+                    height: 300px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &__content {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        padding: 0 15px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    &__icon {
+        width: 70px;
+        height: 74px;
+        margin-bottom: 42px;
+
+        @include respond-to (laptop) {
+            width: 50px;
+            height: 45px;
+            margin-bottom: 20px;
+        }
+
+        @include respond-to (tablet-l) {
+            width: 35px;
+            height: 45px;
+        }
+
+        svg {
+            height: 74px;
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 45px;
+        color: #fff;
+        margin-bottom: 18px;
+
+        @include respond-to (laptop) {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        @include respond-to (tablet-l) {
+            font-size: 24px;
+        }
+
+    }
+
+    &__desc {
+        display: block;
+        width: 100%;
+        max-width: 640px;
+        font-weight: 500;
+        font-size: 22px;
+        text-align: center;
+        color: #fff;
+        line-height: 1.5;
+
+        @include respond-to (laptop) {
+            font-size: 16px;
+        }
+
+        @include respond-to (tavlet-l) {
+            font-size: 13px;
+        }
+    }
+}
