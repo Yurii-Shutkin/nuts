@@ -10,6 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
+  base: '/nuts/',
   server: {
     port: 3000,
     open: true
@@ -69,11 +70,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        about: path.resolve(__dirname, 'src/pages/about/index.html'),
-        'payment-and-delivery': path.resolve(__dirname, "src/pages/payment-and-delivery/index.html"),
-        'corporate-clients': path.resolve(__dirname, "src/pages/corporate-clients/index.html"),
-        'news-and-posts': path.resolve(__dirname, "src/pages/news-and-posts/index.html"),
-        'contact-info': path.resolve(__dirname, "src/pages/contact-info/index.html"),
+        about: path.resolve(__dirname, 'src/html/pages/about/index.html'),
+        'payment-and-delivery': path.resolve(__dirname, "src/html/pages/payment-and-delivery/index.html"),
+        'corporate-clients': path.resolve(__dirname, "src/html/pages/corporate-clients/index.html"),
+        'news-and-posts': path.resolve(__dirname, "src/html/pages/news-and-posts/index.html"),
+        'contact-info': path.resolve(__dirname, "src/html/pages/contact-info/index.html"),
       },
     },
   }
