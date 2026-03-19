@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../../utils/vars.scss" as *;
+
+.marker-template {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.custom-marker {
+    width: 27px;
+    height: 27px;
+    color: map.get($colors, green);
+}

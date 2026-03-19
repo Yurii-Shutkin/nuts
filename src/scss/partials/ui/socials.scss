@@ -1,0 +1,24 @@
+@use "sass:map";
+@use "../../utils/vars.scss" as *;
+@use "../../utils/mixins.scss" as *;
+
+.social {
+    display: flex;
+    gap: 10px;
+
+    &-icon {
+        color: #fff;
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        background: map.get($colors, green);
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 17px;
+            height: 17px;
+            margin: 0 auto;
+        }
+    }
+}
