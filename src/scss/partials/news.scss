@@ -1,0 +1,118 @@
+@use "sass:map";
+@use "../utils/vars.scss" as *;
+@use "../utils/mixins.scss" as *;
+
+.news {
+    padding: 85px 0;
+    background: map.get($colors, bg4);
+
+    @include respond-to (mobile) {
+        padding: 40px 0;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 64px;
+    }
+
+    &__title {
+        margin-bottom: 33px;
+
+        @include respond-to (mobile) {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 122%;
+        text-align: center;
+
+        @include respond-to (tablet) {
+            text-align: left;
+        }
+
+        @include respond-to (mobile) {
+            font-size: 13px;
+            width: 100%;
+            max-width: 160px;
+        }
+    }
+
+    &__swiper-controls {
+        position: relative;
+        top: 5px;
+    }
+
+    &__container {
+        margin-bottom: 73px;
+    }
+
+    .swiper-slide {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__card {
+        width: 100%;
+        max-width: 408px;
+        background: #fff;
+
+        &-preview {
+            height: 270px;
+
+            picture {
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
+
+        &-info {
+            padding: 25px 40px 25px 25px;
+        }
+
+        &-date {
+            font-family: 'Montserrat', 'sans-serif';
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 169%;
+            color: map.get($colors, grey);
+            margin-bottom: 8px;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.4;
+            color: map.get($colors, dark-blue);
+            margin-bottom: 10px;
+        }
+
+        &-desc {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 143%;
+            color: map.get($colors, derk-blue);
+            margin-bottom: 24px;
+        }
+    }
+
+    &__button {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,24 @@
+@use "sass:map";
+@use "../../utils/vars.scss" as *;
+
+.link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    color: map.get($colors, dark-blue);
+    transition: color .3s ease;
+
+    &:hover {
+        color: map.get($colors, green);
+        transition: color .3s ease;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}

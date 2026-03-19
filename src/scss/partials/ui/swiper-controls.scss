@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "../../utils/vars.scss" as *;
+@use "../../utils/mixins.scss" as *;
+
+.swiper-controls {
+    display: flex;
+    padding: 0 24px;
+    justify-content: space-between;
+    align-items: center;
+    width: 141px;
+    height: 58px;
+    background: map.get($colors, green);
+
+    @include respond-to (tablet-l) {
+        padding: 0 10px;
+        width: 100px;
+        height: 35px;
+    }
+
+    &__icon {
+        cursor: pointer;
+        width: 22px;
+        height: 19px;
+        color: #fff;
+        transition: opacity .3s ease;
+        opacity: .5;
+
+        &:hover {
+            opacity: 1;
+            transition: opacity .3s ease;
+
+        }
+
+        &--right {
+            transform: rotate(180deg);
+        }
+    }
+}
