@@ -1,0 +1,45 @@
+@use "sass:map";
+@use "../../utils/vars.scss" as *;
+@use "../../utils/mixins.scss" as *;
+
+.logo {
+    width: 100%;
+    max-width: 496px;
+
+    @include respond-to(laptop) {
+        max-width: fit-content;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        @include respond-to(laptop) {
+            flex-direction: column;
+            width: 100%;
+            max-width: 100px;
+            text-align: center;
+            margin-left: 10px;
+        }
+    }
+
+    span {
+        width: 100%;
+        max-width: 155px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+        font-size: 15px;
+        letter-spacing: 0.2px;
+
+        @include respond-to(laptop) {
+            font-size: 11px;
+        }
+    }
+
+    @include respond-to(laptop) {
+        img {
+            max-width: 29px;
+        }
+    }
+}

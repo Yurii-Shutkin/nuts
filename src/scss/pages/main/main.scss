@@ -2,23 +2,28 @@
 @use "../../reuse.scss";
 @use "../../utils/vars.scss" as *;
 @use "../../utils/mixins.scss" as *;
-@use "../../partials/header.scss";
-@use "../../partials/ui/button.scss";
+
 @use "./hero.scss";
-@use "../../partials/ui/play-icon.scss";
-@use "../../partials/ui/swiper-controls.scss";
-@use "../../partials/ui/link.scss";
 @use "./products.scss";
-@use "../../partials/ui/product-card.scss";
-@use "../../partials/product-card-modal.scss";
 @use "./manufacturer.scss";
 @use "./counter.scss";
 @use "./video-block.scss";
 @use "./benefits.scss";
+
+@use "../../partials/header.scss";
+@use "../../partials/ui/logo.scss";
+@use "../../partials/ui/button.scss";
+@use "../../partials/ui/play-icon.scss";
+@use "../../partials/ui/swiper-controls.scss";
+@use "../../partials/ui/link.scss";
+@use "../../partials/ui/product-card.scss";
+@use "../../partials/product-card-modal.scss";
 @use "../../partials/eco-hero.scss";
 @use "../../partials/news.scss";
 @use "../../partials/contacts.scss";
 @use "../../partials/ui/socials.scss";
+@use "../../partials/ui/social.scss";
+@use "../../partials/footer.scss";
 
 body {
     font-family: 'Raleway', sans-serif;

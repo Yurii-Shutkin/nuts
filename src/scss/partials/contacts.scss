@@ -3,7 +3,7 @@
 @use "../utils/vars.scss" as *;
 
 .contacts {
-    padding: 107px 0;
+    padding: 107px 0 82px 0;
 
     @include respond-to(laptop) {
         padding: 60px 0;
