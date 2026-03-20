@@ -70,11 +70,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-        about: path.resolve(__dirname, 'src/html/pages/about/index.html'),
-        'payment-and-delivery': path.resolve(__dirname, "src/html/pages/payment-and-delivery/index.html"),
-        'corporate-clients': path.resolve(__dirname, "src/html/pages/corporate-clients/index.html"),
-        'news-and-posts': path.resolve(__dirname, "src/html/pages/news-and-posts/index.html"),
-        'contact-info': path.resolve(__dirname, "src/html/pages/contact-info/index.html"),
+        about: path.resolve(__dirname, '/pages/about/index.html'),
+        'payment-and-delivery': path.resolve(__dirname, "/pages/payment-and-delivery/index.html"),
+        'corporate-clients': path.resolve(__dirname, "/pages/corporate-clients/index.html"),
+        'news-and-posts': path.resolve(__dirname, "/pages/news-and-posts/index.html"),
+        'contact-info': path.resolve(__dirname, "/pages/contact-info/index.html"),
       },
     },
   }
