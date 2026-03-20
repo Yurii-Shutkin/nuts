@@ -1,6 +1,6 @@
 @use "sass:map";
-@use "../../utils/vars.scss" as *;
-@use "../../utils/mixins.scss" as *;
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
 
 .benefits {
     padding: 84px 0 100px 0;

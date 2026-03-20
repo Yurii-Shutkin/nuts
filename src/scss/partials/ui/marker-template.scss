@@ -1,5 +1,5 @@
 @use "sass:map";
-@use "../../utils/vars.scss" as *;
+@use "@/scss/utils/vars.scss" as *;
 
 .marker-template {
     display: flex;

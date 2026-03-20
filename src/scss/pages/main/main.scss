@@ -1,29 +1,29 @@
 @use "sass:map";
-@use "../../reuse.scss";
-@use "../../utils/vars.scss" as *;
-@use "../../utils/mixins.scss" as *;
+@use "@/scss/reuse.scss";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
 
-@use "./hero.scss";
 @use "./products.scss";
 @use "./manufacturer.scss";
 @use "./counter.scss";
 @use "./video-block.scss";
 @use "./benefits.scss";
 
-@use "../../partials/header.scss";
-@use "../../partials/ui/logo.scss";
-@use "../../partials/ui/button.scss";
-@use "../../partials/ui/play-icon.scss";
-@use "../../partials/ui/swiper-controls.scss";
-@use "../../partials/ui/link.scss";
-@use "../../partials/ui/product-card.scss";
-@use "../../partials/product-card-modal.scss";
-@use "../../partials/eco-hero.scss";
-@use "../../partials/news.scss";
-@use "../../partials/contacts.scss";
-@use "../../partials/ui/socials.scss";
-@use "../../partials/ui/social.scss";
-@use "../../partials/footer.scss";
+@use "@/scss/partials/header.scss";
+@use "@/scss/partials/hero.scss";
+@use "@/scss/partials/ui/logo.scss";
+@use "@/scss/partials/ui/button.scss";
+@use "@/scss/partials/ui/play-icon.scss";
+@use "@/scss/partials/ui/swiper-controls.scss";
+@use "@/scss/partials/ui/link.scss";
+@use "@/scss/partials/ui/product-card.scss";
+@use "@/scss/partials/product-card-modal.scss";
+@use "@/scss/partials/eco-hero.scss";
+@use "@/scss/partials/news.scss";
+@use "@/scss/partials/contacts.scss";
+@use "@/scss/partials/ui/socials.scss";
+@use "@/scss/partials/ui/social.scss";
+@use "@/scss/partials/footer.scss";
 
 body {
     font-family: 'Raleway', sans-serif;

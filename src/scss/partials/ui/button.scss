@@ -1,6 +1,6 @@
 @use "sass:map";
-@use "../../utils/mixins.scss" as *;
-@use "../../utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+@use "@/scss/utils/vars.scss" as *;
 
 .main-btn {
     font-family: 'Raleway', sans-serif;

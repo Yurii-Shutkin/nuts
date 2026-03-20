@@ -1,6 +1,6 @@
 @use "sass:map";
-@use "../utils/vars.scss" as *;
-@use "../utils/mixins.scss" as *;
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
 
 .eco-hero {
     &__wrap {

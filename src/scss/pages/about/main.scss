@@ -1,9 +1,10 @@
 @use "sass:map";
-@use "../../reuse.scss";
-@use "../../utils/vars.scss" as *;
-@use "../../utils/mixins.scss" as *;
+@use "@/scss/reuse.scss";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
 
 @use "@/scss/partials/header.scss";
+@use "@/scss/partials/hero.scss";
 @use "@/scss/partials/ui/logo.scss";
 @use "@/scss/partials/ui/button.scss";
 @use "@/scss/partials/ui/play-icon.scss";

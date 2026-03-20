@@ -1,6 +1,6 @@
 @use "sass:map";
-@use "../utils/mixins.scss" as *;
-@use "../utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+@use "@/scss/utils/vars.scss" as *;
 
 .sidebar {
     position: fixed;
@@ -131,10 +131,6 @@
 
     &__banner {
         position: relative;
-        // background-image: url('/img/sidebar-banner.png');
-        // background-repeat: no-repeat;
-        // background-position: center;
-        // background-size: cover;
         font-family: 'Raleway', sans-serif;
         color: #fff;
         text-align: center;

@@ -1,12 +1,12 @@
 import 'virtual:svg-icons-register';
-import '../../partials/loadMap.js';
+import '@/js/partials/loadMap.js';
 import '@/js/partials/select.js';
 import '@/js/partials/burgerSide.js';
-import './videoHandler.js';
+import '@/js/partials/videoHandler.js';
 import '@/js/partials/productCardModal.js';
+import '@/js/partials/ecoHeroSlider.js';
+import '@/js/partials/newsSwiper.js';
 import './manufacturer.js';
 import './swiper.js';
 import './countAnim.js';
 import './videoBlock.js';
-import '../../partials/ecoHeroSlider.js';
-import '../../partials/newsSwiper.js';

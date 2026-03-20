@@ -1,6 +1,6 @@
 @use "sass:map";
-@use "../../utils/mixins.scss" as *;
-@use "../../utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+@use "@/scss/utils/vars.scss" as *;
 
 .manufacturer {
     padding: 100px 0 90px 0;
