@@ -11,6 +11,7 @@
 @use "@/scss/partials/ui/play-icon.scss";
 @use "@/scss/partials/ui/swiper-controls.scss";
 @use "@/scss/partials/ui/link.scss";
+@use "@/scss/partials/manufacturer.scss";
 @use "@/scss/partials/eco-hero.scss";
 @use "@/scss/partials/news.scss";
 @use "@/scss/partials/contacts.scss";
@@ -21,4 +22,18 @@
 body {
     font-family: 'Raleway', sans-serif;
     position: relative;
+}
+
+.about {
+    &__hero {
+        margin-bottom: 0;
+    }
+
+    &__manufacturer {
+        background: #fff;
+
+        .manufacturer__leftside {
+            max-width: 520px;
+        }
+    }
 }

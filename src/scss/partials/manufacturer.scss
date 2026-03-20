@@ -1,0 +1,181 @@
+@use "sass:map";
+@use "@/scss/utils/mixins.scss" as *;
+@use "@/scss/utils/vars.scss" as *;
+
+.manufacturer {
+    padding: 100px 0 90px 0;
+    background: map.get($colors, bg3);
+
+    @include respond-to (tablet) {
+        padding: 50px 0;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 60px;
+
+        @include respond-to (laptop-m) {
+            flex-wrap: wrap;
+        }
+
+        @include respond-to (tablet) {
+            gap: 30px;
+        }
+    }
+
+    &__leftside {
+        padding: 26px 0;
+        width: 100%;
+        max-width: 460px;
+
+        @include respond-to (laptop-m) {
+            margin: 0 auto;
+            max-width: 700px;
+        }
+    }
+
+    &__title {
+        color: map.get($colors, dark-blue);
+        margin-bottom: 46px;
+
+        @include respond-to (laptop-m) {
+            font-size: 34px;
+            text-align: center;
+        }
+
+        @include respond-to (tablet) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__desc {
+        font-size: 16px;
+
+        @include respond-to (laptop-m) {
+            text-align: justify;
+        }
+
+        p {
+            font-weight: 500;
+            color: map.get($colors, dark-blue);
+            line-height: 1.56;
+            margin-bottom: 29px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        span {
+            font-weight: 600;
+            color: map.get($colors, green);
+        }
+    }
+
+    &__btn {
+        margin-top: 46px;
+        padding: 15px 41px;
+
+        @include respond-to (laptop-m) {
+            margin: 39px auto 0;
+            display: block;
+        }
+    }
+
+    &__rightside {
+        position: relative;
+        width: 100%;
+        height: 472px;
+        max-width: 700px;
+
+        @include respond-to (laptop-m) {
+            margin: 0 auto;
+            height: auto;
+        }
+    }
+
+
+    &__swiper-wrap {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__swiper {
+        width: 100%;
+
+        height: 400px;
+
+    }
+
+    &__video-slider {
+        position: relative;
+        width: 100%;
+    }
+
+    &__img-preview-wrap {
+        position: relative;
+        transition: opacity .3s ease,
+            visibility .3s ease;
+        z-index: 2;
+
+        &--unactive {
+            visibility: hidden;
+            opacity: 0;
+
+            transition: opacity .3s ease,
+                visibility .3s ease;
+        }
+    }
+
+    .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+    &__slider-controls {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        padding: 0 24px;
+        justify-content: space-between;
+        align-items: center;
+        width: 141px;
+        height: 58px;
+        background: map.get($colors, green);
+        z-index: 9999;
+
+        @include respond-to (tablet-l) {
+            padding: 0 10px;
+            width: 100px;
+            height: 35px;
+        }
+    }
+
+    &__slider-icon {
+        cursor: pointer;
+        width: 22px;
+        height: 19px;
+        color: #fff;
+        transition: opacity .3s ease;
+        opacity: .5;
+
+        &:hover {
+            opacity: 1;
+            transition: opacity .3s ease;
+
+        }
+
+        &--right {
+            transform: rotate(180deg);
+        }
+    }
+}

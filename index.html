@@ -10,36 +10,35 @@
       imgSrc="/img/partials/hero/hero-1.png"
       }}
     </section>
-    <main>
-      <section class="products">
-        {{> pages/main/products }}
-      </section>
-      <section class="manufacturer">
-        {{> pages/main/manufacturer }}
-      </section>
-      <section class="counter">
-        {{> pages/main/counter }}
-      </section>
-      <section class="video-block">
-        {{> pages/main/video-block }}
-      </section>
-      <section class="benefits">
-        {{> pages/main/benefits }}
-      </section>
-      <section class="eco-hero">
-        {{> partials/eco-hero }}
-      </section>
-      <section class="news">
-        {{> partials/news }}
-      </section>
-      <section class="contacts">
-        {{> partials/contacts }}
-      </section>
-    </main>
-    <footer class="footer">
-      {{> partials/footer }}
-    </footer>
-    <script type="module" src="./src/js/pages/main/main.js"></script>
+    <section class="products">
+      {{> pages/main/products }}
+    </section>
+    <section class="manufacturer">
+      {{> partials/manufacturer button=true}}
+    </section>
+    <section class="counter">
+      {{> pages/main/counter }}
+    </section>
+    <section class="video-block">
+      {{> pages/main/video-block }}
+    </section>
+    <section class="benefits">
+      {{> pages/main/benefits }}
+    </section>
+    <section class="eco-hero">
+      {{> partials/eco-hero }}
+    </section>
+    <section class="news">
+      {{> partials/news }}
+    </section>
+    <section class="contacts">
+      {{> partials/contacts }}
+    </section>
+  </main>
+  <footer class="footer">
+    {{> partials/footer }}
+  </footer>
+  <script type="module" src="./src/js/pages/main/main.js"></script>
 </body>
 
 </html>

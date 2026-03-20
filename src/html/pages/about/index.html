@@ -2,7 +2,7 @@
 
 <body>
     <main>
-        <section class="hero">
+        <section class="about__hero hero">
             {{> partials/hero
             breadcrumbs=true
             itemText1="О производстве" itemUrl1="/pages/about/index.html"
@@ -10,6 +10,9 @@
             desc="Единственный в Украине сад совместного выращивание фундука и грецкого ореха"
             imgSrc="/img/partials/hero/hero-2.png"
             }}
+        </section>
+        <section class="about__manufacturer manufacturer">
+            {{> partials/manufacturer paragraph=true}}
         </section>
         <section class="eco-hero">
             {{> partials/eco-hero }}

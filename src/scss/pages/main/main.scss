@@ -4,7 +4,6 @@
 @use "@/scss/utils/mixins.scss" as *;
 
 @use "./products.scss";
-@use "./manufacturer.scss";
 @use "./counter.scss";
 @use "./video-block.scss";
 @use "./benefits.scss";
@@ -17,6 +16,7 @@
 @use "@/scss/partials/ui/swiper-controls.scss";
 @use "@/scss/partials/ui/link.scss";
 @use "@/scss/partials/ui/product-card.scss";
+@use "@/scss/partials/manufacturer.scss";
 @use "@/scss/partials/product-card-modal.scss";
 @use "@/scss/partials/eco-hero.scss";
 @use "@/scss/partials/news.scss";
