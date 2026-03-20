@@ -44,10 +44,15 @@
         perspective: 5000px;
         width: 100%;
         max-width: 410px;
+        height: 525px;
         cursor: pointer;
 
         @include respond-to(laptop-m) {
             max-width: 100%;
+        }
+
+        @include respond-to (mobile) {
+            height: 400px;
         }
 
         &:hover .benefits__card-inner {
@@ -58,7 +63,7 @@
             position: relative;
             width: 100%;
             max-width: 410px;
-            height: 525px;
+            height: 100%;
             transition: transform 0.6s;
             transform-style: preserve-3d;
 
@@ -114,6 +119,11 @@
                 z-index: 1;
                 width: 100%;
                 max-width: 328px;
+                padding: 0 10px;
+
+                @include respond-to (mobile) {
+                    transform: translate(-50%, -50%);
+                }
             }
 
             &-title {
@@ -148,16 +158,21 @@
 
             &-face {
                 position: absolute;
-                // padding: 0 15px;
                 top: 52%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 1;
                 width: 100%;
                 max-width: 328px;
+
+                @include respond-to (mobile) {
+                    top: 48%;
+                    padding: 0 10px;
+                }
             }
 
             &-bg {
+                height: 100%;
 
                 &::after {
                     position: absolute;
@@ -168,11 +183,16 @@
                     bottom: 0;
                     left: 0;
                     background: map.get($colors, overlay-green);
+                    padding: 0 10px;
+                }
+
+                picture {
+                    height: 100%;
                 }
 
                 img {
                     width: 100%;
-                    height: 525px;
+                    height: 100%;
                     object-fit: cover;
                 }
             }
@@ -183,6 +203,11 @@
                 color: #fff;
                 text-align: center;
                 margin-bottom: 22px;
+
+                @include respond-to (mobile) {
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
             }
 
             &-info {
@@ -196,6 +221,11 @@
 
                 &:last-child {
                     margin-bottom: 0;
+                }
+
+                @include respond-to (mobile) {
+                    margin-bottom: 15px;
+                    font-size: 16px;
                 }
             }
 
