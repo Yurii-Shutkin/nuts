@@ -1,0 +1,40 @@
+@use "sass:map";
+@use "@/scss/utils/vars.scss" as *;
+
+.breadcrumbs {
+    position: absolute;
+    top: 36px;
+    z-index: 3;
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            display: flex;
+            align-items: center;
+
+            a {
+                font-weight: 600;
+                font-size: 14px;
+                color: #fff;
+                transition: color .3s ease;
+
+                &:hover {
+                    color: map.get($colors, green);
+                    transition: color .3s ease;
+                }
+            }
+        }
+    }
+
+    &-arrow {
+        margin: 0 9px;
+
+        svg {
+            width: 12px;
+            height: 10px;
+            color: #fff;
+        }
+    }
+}

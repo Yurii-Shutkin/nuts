@@ -7,17 +7,29 @@
     margin-bottom: 83px;
 
     &__banner {
+        height: 600px;
+
+        @include respond-to (tablet-l) {
+            height: 417px;
+        }
 
         &-wrap {
             position: relative;
         }
 
+        picture {
+            height: inherit;
+        }
+
         img {
             width: 100%;
+            height: inherit;
+            object-fit: cover;
+
 
             @include respond-to (tablet-l) {
-                height: 100vh;
-                max-height: 417px;
+                // height: 100%;
+                height: inherit;
                 object-fit: cover;
             }
         }
@@ -32,6 +44,7 @@
         bottom: 0;
         left: 0;
         background: map.get($colors, overlay);
+        z-index: 1;
     }
 
     &__content {
@@ -43,7 +56,7 @@
         display: flex;
         flex-direction: column;
         padding: 15px;
-        z-index: 1;
+        z-index: 2;
         visibility: visible;
         transition: opacity .3s ease;
 
@@ -107,14 +120,14 @@
         opacity: 0;
         width: 100%;
         object-fit: cover;
-        max-height: 600px;
+        height: inherit;
         transition: opacity .3s ease;
-        z-index: 0;
 
         &-wrap {
             width: 100%;
             position: absolute;
             top: 0;
+            z-index: 1;
         }
     }
 }

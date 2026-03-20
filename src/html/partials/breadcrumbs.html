@@ -1,0 +1,16 @@
+<nav class="breadcrumbs">
+    <ul>
+        {{#each breadcrumbLinks}}
+        <li>
+            <a href="{{ url }}">{{ label }}</a>
+            {{#unless @last}}
+            <div class="breadcrumbs-arrow">
+                <svg>
+                    <use href="#icon-breadcrumbs-arrow"></use>
+                </svg>
+            </div>
+            {{/unless}}
+        </li>
+        {{/each}}
+    </ul>
+</nav>
