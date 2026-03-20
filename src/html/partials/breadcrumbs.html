@@ -1,16 +1,24 @@
 <nav class="breadcrumbs">
-    <ul>
-        {{#each breadcrumbLinks}}
-        <li>
-            <a href="{{ url }}">{{ label }}</a>
-            {{#unless @last}}
-            <div class="breadcrumbs-arrow">
-                <svg>
-                    <use href="#icon-breadcrumbs-arrow"></use>
-                </svg>
-            </div>
-            {{/unless}}
-        </li>
-        {{/each}}
-    </ul>
+    <a class="breadcrumbs__link" href="/">Главная</a>
+    {{#if itemText1}}
+    <div class="breadcrumbs__arrow">
+        <svg>
+            <use href="#icon-breadcrumbs-arrow"></use>
+        </svg>
+    </div>
+    <a class="breadcrumbs__link" href="{{itemUrl1}}">{{itemText1}}</a> {{/if}}
+    {{#if itemText2}}
+    <div class="breadcrumbs__arrow">
+        <svg>
+            <use href="#icon-breadcrumbs-arrow"></use>
+        </svg>
+    </div>
+    <a class="breadcrumbs__link" href="{{itemUrl2}}">{{itemText2}}</a> {{/if}}
+    {{#if itemText3}}
+    <div class="breadcrumbs__arrow">
+        <svg>
+            <use href="#icon-breadcrumbs-arrow"></use>
+        </svg>
+    </div>
+    <a class="breadcrumbs__link" href="{{itemUrl3}}">{{itemText3}}</a> {{/if}}
 </nav>

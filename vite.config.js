@@ -57,89 +57,9 @@ export default defineConfig({
               .join(" ");
           },
         },
-        context: (pagePath) => {
-        const breadcrumbsData = {
-          '/pages/about/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'О производстве', url: '/pages/about/index.html' },
-          ],
-          '/pages/corporate-clients/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Оптовым и корпоративным клиентам', url: '/pages/corporate-clients/index.html' },
-          ],
-          '/pages/payment-and-delivery/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Оплата и доставка', url: '/pages/payment-and-delivery/index.html' },
-          ],
-          '/pages/news-and-posts/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Новости и статьи', url: '/pages/news-and-posts/index.html' },
-          ],
-          '/pages/gallery/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Галерея', url: '/pages/gallery/index.html' },
-          ],
-          '/pages/catalog/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Магазин', url: '/pages/catalog/index.html' },
-          ],
-          '/pages/product-card/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Карточка товара', url: '/pages/product-card/index.html' },
-          ],
-          '/pages/sign-up/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Регистрация', url: '/pages/sign-up/index.html' },
-          ],
-          '/pages/adress/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Адрес и реквизиты', url: '/pages/adress/index.html' },
-          ],
-          '/pages/account/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Личный кабинет', url: '/pages/account/index.html' },
-          ],
-          '/pages/orders-history/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Личный кабинет', url: '/pages/account/index.html' },
-            { label: 'История заказов', url: '/pages/orders-history/index.html' },
-          ],
-          '/pages/sign-in/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Вход', url: '/pages/sign-in/index.html' },
-          ],
-          '/pages/payment-history/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'История транзакций', url: '/pages/payment-history/index.html' },
-          ],
-          '/pages/password/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Восстановление пароля', url: '/pages/password/index.html' },
-          ],
-          '/pages/contact-info/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Личный кабинет', url: '/pages/account/index.html' },
-            { label: 'Контактная информация', url: '/pages/contact-info/index.html' },
-          ],
-          '/pages/cart/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Корзина', url: '/pages/cart/index.html' },
-          ],
-          '/pages/order/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Личный кабинет', url: '/pages/account/index.html' },
-            { label: 'Заказ', url: '/pages/order/index.html' },
-          ],
-          '/pages/ordering/index.html': [
-            { label: 'Главная', url: '/' },
-            { label: 'Корзина', url: '/pages/cart/index.html' },
-            { label: 'Заказ', url: '/pages/ordering/index.html' },
-          ],
-        };
-        return {
-          crumbs: breadcrumbsData[pagePath] || []
-        };
-      }
+        context: {
+
+        },
       }),
   ],
 

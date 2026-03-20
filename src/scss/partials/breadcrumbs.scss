@@ -5,30 +5,22 @@
     position: absolute;
     top: 36px;
     z-index: 3;
+    display: flex;
+    align-items: center;
 
-    ul {
-        display: flex;
-        align-items: center;
+    &__link {
+        font-weight: 600;
+        font-size: 14px;
+        color: #fff;
+        transition: color .3s ease;
 
-        li {
-            display: flex;
-            align-items: center;
-
-            a {
-                font-weight: 600;
-                font-size: 14px;
-                color: #fff;
-                transition: color .3s ease;
-
-                &:hover {
-                    color: map.get($colors, green);
-                    transition: color .3s ease;
-                }
-            }
+        &:hover {
+            color: map.get($colors, green);
+            transition: color .3s ease;
         }
     }
 
-    &-arrow {
+    &__arrow {
         margin: 0 9px;
 
         svg {
