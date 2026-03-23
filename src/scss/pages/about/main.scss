@@ -19,6 +19,8 @@
 @use "@/scss/partials/ui/social.scss";
 @use "@/scss/partials/footer.scss";
 
+@use './history.scss';
+
 body {
     font-family: 'Raleway', sans-serif;
     position: relative;

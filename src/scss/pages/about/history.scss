@@ -1,0 +1,174 @@
+@use 'sass:map';
+@use '@/scss/utils/vars' as *;
+@use '@/scss/utils/mixins' as *;
+
+.history {
+    background: map.get($colors, bg3);
+    padding: 101px 0;
+    overflow: hidden;
+
+    @include respond-to (mobile) {
+        padding: 50px 0;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        @include respond-to (laptop-m) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__leftside {
+        display: flex;
+        width: 100%;
+        max-width: 770px;
+        gap: 44px;
+        flex-wrap: wrap;
+
+        @include respond-to (laptop-m) {
+            margin: 0 auto;
+        }
+    }
+
+    &__rightside {
+        width: 100%;
+        max-width: 453px;
+
+        @include respond-to (laptop-m) {
+            margin: 0 auto;
+        }
+    }
+
+    &__owner {
+        width: 100%;
+        max-width: 342px;
+        height: 493px;
+
+        @include respond-to (laptop-m) {
+            margin: 0 auto;
+        }
+
+        &-photo {
+            img {
+                height: 493px;
+
+                object-fit: cover;
+            }
+        }
+
+        &-info {
+            padding: 31px 0;
+            width: 100%;
+            max-width: 380px;
+
+            @include respond-to (laptop-m) {
+                margin: 0 auto;
+            }
+        }
+
+        &-title {
+            font-weight: 800;
+            font-size: 32px;
+            color: map.get($colors, dark-blue);
+            margin-bottom: 11px;
+        }
+
+        &-desc {
+            font-family: 'Lato', 'sans-serif';
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 131%;
+            color: map.get($colors, dark-blue);
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        &-quote {
+            display: flex;
+            gap: 12px;
+            align-items: baseline;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 87%;
+            color: map.get($colors, dark-blue);
+            line-height: 1;
+            margin-bottom: 63px;
+
+            &-icon {
+                width: 46px;
+
+                svg {
+                    width: 26px;
+                    height: 26px;
+                    color: map.get($colors, green);
+                }
+            }
+
+        }
+
+        &-btn {
+            padding: 15px 41px;
+
+            @include respond-to (tablet) {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__card {
+        position: relative;
+        background: map.get($colors, green);
+        padding: 30px 30px 77px 47px;
+
+        @include respond-to (mobile) {
+            padding: 30px;
+        }
+
+        &-bg {
+            position: absolute;
+            bottom: -28px;
+            right: -90px;
+            color: #fff;
+
+            svg {
+                width: 322px;
+                height: 299px;
+            }
+
+        }
+
+        &-title {
+            font-weight: 800;
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 32px;
+
+            @include respond-to (tablet) {
+                text-align: center;
+            }
+        }
+
+        &-paragraph {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 157%;
+            color: map.get($colors, bg2);
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include respond-to (tablet) {
+                text-align: justify;
+            }
+
+        }
+    }
+}
