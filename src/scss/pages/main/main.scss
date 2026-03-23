@@ -4,7 +4,7 @@
 @use "@/scss/utils/mixins.scss" as *;
 
 @use "./products.scss";
-@use "./counter.scss";
+@use "@/scss/partials/counter.scss";
 @use "./video-block.scss";
 @use "./benefits.scss";
 
