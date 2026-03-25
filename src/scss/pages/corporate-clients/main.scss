@@ -8,6 +8,7 @@
 @use "@/scss/partials/breadcrumbs.scss";
 @use "@/scss/partials/ui/logo.scss";
 @use "@/scss/partials/ui/button.scss";
+@use "@/scss/partials/ui/tabs.scss";
 @use "@/scss/partials/counter.scss";
 @use "@/scss/partials/eco-hero.scss";
 @use "@/scss/partials/contacts.scss";
@@ -15,7 +16,8 @@
 @use "@/scss/partials/ui/social.scss";
 @use "@/scss/partials/footer.scss";
 
-@use './clents-desc.scss';
+@use './clients-desc.scss';
+@use './clients-tabs.scss';
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -27,5 +29,13 @@ body {
         .hero__content {
             transform: translateY(-32%);
         }
+    }
+
+    .counter {
+        padding: 73px 0 87px 0;
+    }
+
+    .contacts {
+        padding-top: 100px;
     }
 }

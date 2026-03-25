@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+
+.clients-tabs {
+    margin-bottom: 97px;
+
+    @include respond-to(laptop-m) {
+        margin-bottom: 30px;
+    }
+
+    @include respond-to(mobile) {
+        margin-bottom: 0;
+    }
+}

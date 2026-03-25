@@ -1,7 +1,7 @@
 {{> partials/header }}
 
 <body>
-    <main>
+    <main class="clients">
         <section class="clients__hero hero">
             {{> partials/hero
             breadcrumbs=true
@@ -13,6 +13,9 @@
         </section>
         <section class="clients-desc">
             {{> pages/corporate-clients/clients-desc }}
+        </section>
+        <section class="clients-tabs">
+            {{> pages/corporate-clients/clients-tabs}}
         </section>
         <section class="counter">
             {{> partials/counter }}
