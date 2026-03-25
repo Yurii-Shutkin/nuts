@@ -2,7 +2,7 @@
 
 <body>
     <main>
-        <section class="about__hero hero">
+        <section class="clients__hero hero">
             {{> partials/hero
             breadcrumbs=true
             itemText1="Оптовым и корпоративным клиентам" itemUrl1="/pages/corporate-clients/index.html"
@@ -11,7 +11,9 @@
             imgSrc="/img/partials/hero/hero-3.png"
             }}
         </section>
-
+        <section class="clients-desc">
+            {{> pages/corporate-clients/clients-desc }}
+        </section>
         <section class="counter">
             {{> partials/counter }}
         </section>

@@ -1,0 +1,70 @@
+@use "sass:map";
+@use '@/scss/utils/vars.scss' as *;
+@use '@/scss/utils/mixins.scss' as *;
+
+.clients-desc {
+    margin-bottom: 35px;
+
+    &__wrap {
+        display: flex;
+        gap: 100px;
+
+        @include respond-to(laptop-m) {
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 45px;
+        letter-spacing: 0.01em;
+        color: map.get($colors, dark-blue);
+        width: 100%;
+        max-width: 420px;
+
+        @include respond-to(laptop-m) {
+            max-width: unset;
+            text-align: center;
+        }
+
+        @include respond-to(tablet) {
+            font-size: 34px;
+        }
+    }
+
+    &__text {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 108px;
+        position: relative;
+        top: 10px;
+
+        @include respond-to(laptop-m) {
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        @include respond-to(tablet) {
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+    }
+
+    &__paragraph {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: map.get($colors, dark-blue);
+        width: 100%;
+        max-width: 330px;
+
+        span {
+            font-weight: 700;
+        }
+
+        @include respond-to(laptop-m) {
+            max-width: unset;
+        }
+    }
+}

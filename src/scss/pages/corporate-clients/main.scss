@@ -15,7 +15,17 @@
 @use "@/scss/partials/ui/social.scss";
 @use "@/scss/partials/footer.scss";
 
+@use './clents-desc.scss';
+
 body {
     font-family: 'Raleway', sans-serif;
     position: relative;
+}
+
+.clients {
+    &__hero {
+        .hero__content {
+            transform: translateY(-32%);
+        }
+    }
 }
