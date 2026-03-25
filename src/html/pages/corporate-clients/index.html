@@ -1,0 +1,31 @@
+{{> partials/header }}
+
+<body>
+    <main>
+        <section class="about__hero hero">
+            {{> partials/hero
+            breadcrumbs=true
+            itemText1="Оптовым и корпоративным клиентам" itemUrl1="/pages/corporate-clients/index.html"
+            title="Орех Причерноморья"
+            desc="Единственный в Украине сад совместного выращивание фундука и грецкого ореха"
+            imgSrc="/img/partials/hero/hero-3.png"
+            }}
+        </section>
+
+        <section class="counter">
+            {{> partials/counter }}
+        </section>
+        <section class="eco-hero">
+            {{> partials/eco-hero }}
+        </section>
+        <section class="contacts">
+            {{> partials/contacts }}
+        </section>
+    </main>
+    <footer class="footer">
+        {{> partials/footer }}
+    </footer>
+    <script type="module" src="/src/js/pages/corporate-clients/main.js"></script>
+</body>
+
+</html>
