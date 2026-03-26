@@ -3,6 +3,12 @@
 @use "@/scss/utils/mixins" as *;
 
 .paydel {
+    &-swiper {
+        &__wrap {
+            margin-bottom: 73px;
+        }
+    }
+
     &__swiper {
         margin-bottom: 70px;
     }
@@ -109,4 +115,7 @@
         }
     }
 
+    .contacts {
+        padding-top: 101px;
+    }
 }
