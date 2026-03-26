@@ -1,0 +1,112 @@
+@use "sass:map";
+@use "@/scss/utils/vars" as *;
+@use "@/scss/utils/mixins" as *;
+
+.paydel {
+    &__swiper {
+        margin-bottom: 70px;
+    }
+
+    &__slide {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 60px;
+
+        @include respond-to(laptop-m) {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+
+        &-title {
+            margin-bottom: 25px;
+        }
+
+        &-leftside {
+            margin-top: 10px;
+        }
+
+        &-desc {
+            &-header {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                margin-bottom: 10px;
+            }
+
+            &-item {
+                margin-bottom: 37px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-icon {
+                width: 20px;
+                height: 20px;
+                color: #fff;
+
+                &-wrap {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background: map.get($colors, icon-border);
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        background: map.get($colors, green);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            &-desc {
+                width: 100%;
+                max-width: 440px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 150%;
+                color: map.get($colors, dark-blue);
+
+                @include respond-to(laptop-m) {
+                    max-width: unset;
+                }
+            }
+        }
+
+        &-rightside {
+            @include respond-to(laptop-m) {
+                width: 100%;
+            }
+        }
+
+        &-img {
+            img {
+                @include respond-to(laptop-m) {
+                    width: 100%;
+                }
+
+                @include respond-to(tablet) {
+                    height: 300px;
+                }
+
+                @include respond-to(mobile) {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+}

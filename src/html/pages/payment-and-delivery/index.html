@@ -1,8 +1,8 @@
 {{> partials/header }}
 
 <body>
-    <main class="payment">
-        <section class="payment__hero hero">
+    <main class="paydel">
+        <section class="paydel__hero hero">
             {{> partials/hero
             breadcrumbs=true
             itemText1="Оплата и доставка" itemUrl1="/pages/payment-and-delivery/index.html"
@@ -10,6 +10,9 @@
             imgSrc="/img/partials/hero/hero-5.png"
             video=false
             }}
+        </section>
+        <section class="paydel-swiper">
+            {{> pages/payment-and-delivery/paydel-swiper }}
         </section>
         <section class="counter">
             {{> partials/counter }}

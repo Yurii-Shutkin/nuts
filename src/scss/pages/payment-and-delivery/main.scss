@@ -17,6 +17,8 @@
 @use "@/scss/partials/ui/social.scss";
 @use "@/scss/partials/footer.scss";
 
+@use './paydel-swiper.scss';
+
 body {
     font-family: 'Raleway', sans-serif;
     position: relative;
@@ -34,5 +36,38 @@ body {
 
     &__btn-play {
         display: none;
+    }
+}
+
+.tabs {
+    &__header {
+        height: unset;
+        margin-bottom: 51px;
+
+        &-wrap {
+            justify-content: space-around;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__tab {
+        width: 250px;
+        gap: 8px;
+
+
+        &::after {
+            bottom: -5px;
+        }
+
+
+        &-icon {
+            width: 47px;
+            height: 47px;
+
+            svg {
+                width: 40px;
+                height: 45px;
+            }
+        }
     }
 }
