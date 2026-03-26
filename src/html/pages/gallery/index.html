@@ -1,0 +1,33 @@
+{{> partials/header }}
+
+<body>
+    <main>
+        <section class="hero">
+            {{> partials/hero
+            breadcrumbs=true
+            itemText1="Галерея" itemUrl1="/pages/gallery/index.html"
+            title="Галерея"
+            desc="Кадры социальной активности компании"
+            imgSrc="/img/partials/hero/hero-6.png"
+            }}
+        </section>
+        <section class="gallery">
+            <div class="gallery__inner">
+                {{> partials/gallery}}
+                {{> partials/gallery}}
+                <a href="/pages/gallery/index.html" class="gallery__btn transparent-btn">
+                    Посмотреть еще
+                </a>
+            </div>
+        </section>
+        <section class="contacts">
+            {{> partials/contacts }}
+        </section>
+    </main>
+    <footer class="footer">
+        {{> partials/footer }}
+    </footer>
+    <script type="module" src="/src/js/pages/gallery/main.js"></script>
+</body>
+
+</html>

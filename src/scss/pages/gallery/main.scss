@@ -1,0 +1,54 @@
+@use "sass:map";
+@use "@/scss/reuse.scss";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+
+@use "@/scss/partials/header.scss";
+@use "@/scss/partials/hero.scss";
+@use "@/scss/partials/breadcrumbs.scss";
+@use "@/scss/partials/ui/play-icon.scss";
+@use "@/scss/partials/ui/logo.scss";
+@use "@/scss/partials/gallery.scss";
+@use "@/scss/partials/ui/button.scss";
+@use "@/scss/partials/contacts.scss";
+@use "@/scss/partials/ui/socials.scss";
+@use "@/scss/partials/ui/social.scss";
+@use "@/scss/partials/footer.scss";
+
+body {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+.gallery {
+    padding: 10px 0;
+
+    &__inner {
+        padding-bottom: 88px;
+    }
+
+    &__grid {
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        margin: 70px auto 0;
+        padding: 16px 37px;
+    }
+}
+
+.hero {
+    .circle {
+        display: none;
+    }
+}
+
+.contacts {
+    padding: 102px 0 91px 0;
+    background: map.get($colors, bg3);
+}
+
+
+.footer {
+    padding-top: 43px;
+}
