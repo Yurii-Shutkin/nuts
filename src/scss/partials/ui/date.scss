@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "@/scss/utils/mixins.scss" as *;
+@use "@/scss/utils/vars.scss" as *;
+
+.date {
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 500;
+    font-size: 13px;
+    color: map.get($colors, grey);
+    display: block;
+    margin-bottom: 27px;
+}

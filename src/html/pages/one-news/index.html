@@ -1,0 +1,28 @@
+{{> partials/header }}
+
+<body>
+    <main class="one-news">
+        <section>
+            <div class="container">
+                {{> partials/breadcrumbs
+                itemText1="Новости и статьи" itemUrl1="/pages/news-and-posts/index.html"
+                itemText2="Статья" itemUrl1="/pages/one-news/index.html"}}
+            </div>
+        </section>
+        <section class="one-news__wrapper">
+            <div class="container">
+                {{> pages/one-news/inner}}
+            </div>
+        </section>
+        </div>
+        <section class="contacts">
+            {{> partials/contacts }}
+        </section>
+    </main>
+    <footer class="one-news__footer footer">
+        {{> partials/footer }}
+    </footer>
+    <script type="module" src="/src/js/pages/one-news/main.js"></script>
+</body>
+
+</html>

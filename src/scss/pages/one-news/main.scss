@@ -1,0 +1,52 @@
+@use "sass:map";
+@use "@/scss/reuse.scss";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+
+@use "@/scss/partials/header.scss";
+@use "@/scss/partials/hero.scss";
+@use "@/scss/partials/breadcrumbs.scss";
+@use "@/scss/partials/ui/logo.scss";
+@use "@/scss/partials/ui/date.scss";
+@use "@/scss/partials/news-hero.scss";
+@use "@/scss/partials/news.scss";
+@use "@/scss/partials/ui/link.scss";
+@use "@/scss/partials/ui/button.scss";
+@use "@/scss/partials/ui/play-icon.scss";
+@use "@/scss/partials/contacts.scss";
+@use "@/scss/partials/ui/socials.scss";
+@use "@/scss/partials/ui/social.scss";
+@use "@/scss/partials/footer.scss";
+
+@use "./inner.scss";
+
+body {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+.one-news {
+    .breadcrumbs {
+        position: static;
+        padding: 36px 0 12px 0;
+
+        &__arrow {
+            svg {
+                color: map.get($colors, grey);
+            }
+        }
+
+        &__link {
+            color: map.get($colors, grey);
+        }
+    }
+
+    .contacts {
+        background: map.get($colors, bg3);
+        padding: 102px 0 88px 0;
+    }
+
+    &__footer {
+        padding-top: 46px;
+    }
+}
