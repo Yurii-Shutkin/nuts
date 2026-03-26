@@ -1,0 +1,338 @@
+@use "sass:map";
+@use "@/scss/reuse.scss";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+
+@use "@/scss/partials/header.scss";
+@use "@/scss/partials/hero.scss";
+@use "@/scss/partials/breadcrumbs.scss";
+@use "@/scss/partials/ui/logo.scss";
+@use "@/scss/partials/news-hero.scss";
+@use "@/scss/partials/news.scss";
+@use "@/scss/partials/ui/link.scss";
+@use "@/scss/partials/ui/button.scss";
+@use "@/scss/partials/ui/play-icon.scss";
+@use "@/scss/partials/contacts.scss";
+@use "@/scss/partials/ui/socials.scss";
+@use "@/scss/partials/ui/social.scss";
+@use "@/scss/partials/footer.scss";
+
+body {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+.news-and-posts {
+    .breadcrumbs {
+        position: static;
+        padding: 36px 0 12px 0;
+
+        &__arrow {
+            svg {
+                color: map.get($colors, grey);
+            }
+        }
+
+        &__link {
+            color: map.get($colors, grey);
+        }
+    }
+
+    &__header {
+        margin: 0 auto 66px;
+
+        @include respond-to(laptop) {
+            margin-bottom: 40px;
+            padding-top: 40px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: 800;
+        font-size: 45px;
+        letter-spacing: 0.01em;
+        color: map.get($colors, dark-blue);
+        margin-bottom: 21px;
+
+        @include respond-to(laptop) {
+            font-size: 40px;
+        }
+
+        @include respond-to(mobile) {
+            font-size: 32px;
+        }
+    }
+
+    &__desc {
+        display: block;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        color: map.get($colors, dark-blue);
+
+    }
+
+    &__small-wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 28px;
+
+        @include respond-to(laptop) {
+            display: grid;
+        }
+
+        .news__card {
+            &-preview {
+                @include respond-to (laptop-m) {
+                    height: 320px;
+                }
+
+                @include respond-to (mobile) {
+                    height: 250px;
+                }
+            }
+
+            &-info {
+                padding: 25px 40px 25px 0;
+            }
+
+            @include respond-to(laptop) {
+                max-width: unset;
+            }
+        }
+    }
+
+    .video-card {
+        margin-bottom: 90px;
+    }
+
+    .gallery {
+
+        &__card,
+        &__card-video {
+            position: relative;
+            cursor: pointer;
+            width: 100%;
+            height: auto;
+
+        }
+
+        &__card {
+            font-family: 'Montserrat', 'sans-serif';
+            position: relative;
+
+            @include respond-to (laptop-m) {
+                height: 552px;
+            }
+
+            @include respond-to (tablet-l) {
+                height: 400px;
+            }
+
+            @include respond-to (tablet) {
+                height: 300px;
+            }
+
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                content: "";
+                background: map.get($colors, overlay-green);
+                opacity: 0;
+                transition: opacity .3s ease;
+
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+                    transition: opacity .3s ease;
+                }
+
+                .gallery__card-text-content {
+                    opacity: 1;
+                    transition: opacity .3s ease;
+                }
+            }
+
+            &-title {
+                font-weight: 800;
+                font-size: 22px;
+                letter-spacing: 0.01em;
+                color: #fff;
+            }
+
+            &-desc {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 147%;
+                color: #fff;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            &-hidden {
+                &-content {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    bottom: 0;
+                }
+
+                &-title {
+                    margin-bottom: 25px;
+                }
+            }
+
+            &-img {
+                width: 100%;
+                height: 100%;
+
+                picture {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-text-content {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                padding: 75px 40px;
+                width: 100%;
+                max-width: 570px;
+                opacity: 0;
+            }
+
+            &-play-icon {
+                width: 100%;
+                max-width: 61px;
+                margin: 0 auto 28px;
+            }
+
+            &-video {
+                margin-bottom: 70px;
+
+                @include respond-to(mobile) {
+                    margin-bottom: 40px;
+                }
+
+                &-wrap {
+                    margin-bottom: 69px;
+                }
+
+                &-content {
+                    position: relative;
+                    height: 100%;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background: map.get($colors, overlay);
+                    }
+                }
+
+                &-preview {
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    picture {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                &-textcontent {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-21%);
+                    height: auto;
+                    text-align: center;
+                    z-index: 1;
+
+                    @include respond-to (mobile) {
+                        padding: 0 15px;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                &-desc {
+                    width: 100%;
+                    display: block;
+                    max-width: 530px;
+                    margin: 0 auto;
+
+
+                    @include respond-to (tablet) {
+                        display: none;
+                    }
+                }
+
+                &-wrap {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    visibility: hidden;
+                    opacity: 1;
+                    transition: visibility .3s ease,
+                        opacity .3s ease;
+                    z-index: 3;
+
+                    video {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                &-title {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+        padding: 15px 35px;
+    }
+
+    .contacts {
+        background: map.get($colors, bg3);
+        padding: 101px 0 90px 0;
+    }
+
+    .footer {
+        padding-top: 45px;
+    }
+}

@@ -1,0 +1,63 @@
+{{> partials/header }}
+
+<body>
+    <main class="news-and-posts">
+        <section>
+            <div class="container">
+                {{> partials/breadcrumbs itemText1="Новости и статьи" itemUrl1="/pages/news-and-posts/index.html"}}
+            </div>
+        </section>
+        <div class="container">
+            <div class="news-and-posts__header">
+                <h2 class="news-and-posts__title">Новости и статьи</h2>
+                <span class="news-and-posts__desc">Свежие новости и полезная информация</span>
+            </div>
+            <section class="news-and-posts__wrap">
+                {{> partials/news-hero}}
+                <div class="news-and-posts__small-wrap">
+                    {{> partials/news-card}}
+                    {{> partials/news-card}}
+                    {{> partials/news-card}}
+                </div>
+            </section>
+            <section class="video-card">
+                <div class="gallery__card gallery__card-video ">
+                    <div class="gallery__card-video-content">
+                        <div class="gallery__card-video-preview">
+                            <picture>
+                                <img src="/img/about/gallery/img-3.png" alt="preview">
+                            </picture>
+                        </div>
+                        <div class="gallery__card-video-textcontent">
+                            <div class="gallery__card-play-icon">
+                                {{> partials/play-icon}}
+                            </div>
+                            <h4 class="gallery__card-video-title gallery__card-title">
+                                Проект UBHDP
+                            </h4>
+                            <span class="gallery__card-video-desc gallery__card-desc">
+                                Вчера к нам приезжал американский агроном Рон , спасибо Мельнику Евгению и проекту UBHDP
+                                за
+                                возможность получить консультацию
+                                от мировых специалистов!
+                            </span>
+                        </div>
+                        <div class="gallery__card-video-wrap">
+                            <video src="/video/perspective-o.mp4" controls></video>
+                        </div>
+                    </div>
+                </div>
+                <a href="/pages/gallery/index.html" class="news-and-posts__btn transparent-btn">Посмотреть еще</a>
+            </section>
+        </div>
+        <section class="contacts">
+            {{> partials/contacts }}
+        </section>
+    </main>
+    <footer class="footer">
+        {{> partials/footer }}
+    </footer>
+    <script type="module" src="/src/js/pages/news-and-posts/main.js"></script>
+</body>
+
+</html>
