@@ -1,0 +1,143 @@
+@use "sass:map";
+@use "@/scss/utils/vars" as *;
+@use "@/scss/utils/mixins" as *;
+
+.form {
+    font-family: 'Montserrat', 'sans-serif';
+
+    &__input {
+        width: 100%;
+        padding: 10px 0 10px 17px;
+        border: 1px solid map.get($colors, border);
+        color: map.get($colors, dark-blue);
+        font-size: 14px;
+        margin-bottom: 20px;
+        transition: background .3s ease;
+        transition: border .3s ease;
+
+        &:hover {
+            background: map.get($colors, overlay-form);
+            transition: background .3s ease;
+        }
+
+        &:focus {
+            border: 1px solid map.get($colors, salad);
+            background: #fff;
+            transition: border .3s ease,
+                background .3s ease;
+        }
+    }
+
+    &__select {
+        width: 100%;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-control {
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid map.get($colors, border);
+            padding: 10px 17px;
+            font-size: 14px;
+            color: map.get($colors, dark-blue);
+            transition: border .3s ease,
+                background .3s ease;
+
+            &:hover {
+                background: map.get($colors, overlay-form);
+                transition: background .3s ease;
+            }
+
+            &--active {
+                border: 1px solid map.get($colors, salad);
+                background: #fff;
+                transition: border .3s ease,
+                    background .3s ease;
+
+                &:hover {
+                    background: #fff;
+                }
+            }
+        }
+
+        &-arrow {
+            width: 10px;
+            height: 5px;
+            transform: rotate(0deg);
+            transition: transform .3s ease;
+
+            svg {
+                color: map.get($colors, salad);
+                height: 8px;
+            }
+
+            &--active {
+                transform: rotate(180deg);
+                transition: transform .3s ease;
+            }
+        }
+
+        &-dropdown {
+            width: 100%;
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            flex-direction: column;
+            background: #fff;
+            border-bottom: 1px solid map.get($colors, border);
+            transition: opacity .3s ease;
+
+            &--active {
+                visibility: visible;
+                opacity: 1;
+                transition: opacity .3s ease;
+            }
+        }
+
+        &-option {
+            cursor: pointer;
+            display: block;
+            padding: 10px 17px;
+            font-size: 14px;
+            color: map.get($colors, dark-blue);
+            text-align: left;
+            background: transparent;
+            flex-shrink: 0;
+            border-bottom: 1px solid map.get($colors, border);
+            border-left: 1px solid map.get($colors, border);
+            border-right: 1px solid map.get($colors, border);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                background: map.get($colors, overlay-form);
+                transition: background .3s ease;
+            }
+
+            &-id {
+                display: none;
+            }
+
+            &--active {
+                background: map.get($colors, green);
+                padding: 10px 17px;
+                transition: background .3s ease,
+                    color .3s ease;
+                color: #fff;
+                font-weight: 600;
+
+                &:hover {
+                    background: map.get($colors, green);
+                }
+            }
+        }
+    }
+}
