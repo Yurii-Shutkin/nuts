@@ -1,0 +1,40 @@
+{{> partials/header }}
+
+<body>
+    <main class="catalog">
+        <section class="catalog__hero hero">
+            {{> partials/hero
+            breadcrumbs=true
+            itemText1="Магазин" itemUrl1="/pages/catalog/index.html"
+            title="Каталог продукции"
+            imgSrc="/img/partials/hero/hero-4.png"
+            }}
+        </section>
+        <section class="catalog__products">
+            <div class="container">
+                <div class="products__grid">
+                    {{> partials/product-card }}
+                    {{> partials/product-card }}
+                    {{> partials/product-card }}
+                    {{> partials/product-card }}
+                    {{> partials/product-card }}
+                    {{> partials/product-card }}
+                    {{> partials/product-card-modal }}
+                </div>
+                <button type="button" class="products__button transparent-btn">Загрузить еще</a>
+            </div>
+        </section>
+        <section class="catalog__info">
+            {{> pages/catalog/catalog-info}}
+        </section>
+        <section class="contacts">
+            {{> partials/contacts }}
+        </section>
+    </main>
+    <footer class="footer">
+        {{> partials/footer }}
+    </footer>
+    <script type="module" src="/src/js/pages/catalog/main.js"></script>
+</body>
+
+</html>

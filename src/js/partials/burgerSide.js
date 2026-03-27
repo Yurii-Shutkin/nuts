@@ -12,3 +12,8 @@ sidebarCloseBtn.addEventListener('click', () => {
   sidebar.style.transform = 'translateX(-100%)';
   body.style.overflow = 'auto';
 })
+
+window.addEventListener('resize', () => {
+  sidebar.style.transform = 'translateX(-100%)';
+  body.style.overflow = 'auto';
+})

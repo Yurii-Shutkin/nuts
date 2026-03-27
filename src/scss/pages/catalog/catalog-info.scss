@@ -1,0 +1,141 @@
+@use "sass:map";
+@use "@/scss/utils/vars" as *;
+@use "@/scss/utils/mixins" as *;
+
+.catalog {
+    &__products {
+        margin-bottom: 96px;
+
+        .products__button {
+            padding: 16px 43px;
+        }
+    }
+
+    &__info {
+        padding: 100px 0 89px 0;
+        background: map.get($colors, bg3);
+
+        @include respond-to(tablet) {
+            padding: 60px 0;
+        }
+
+        &-wrap {
+            display: flex;
+            justify-content: space-between;
+            gap: 60px;
+
+            @include respond-to(laptop-m) {
+                flex-wrap: wrap;
+            }
+        }
+
+        &-leftside {
+            width: 100%;
+            max-width: 527px;
+
+            @include respond-to(laptop-m) {
+                max-width: unset;
+            }
+        }
+
+        &-title {
+            font-weight: 800;
+            font-size: 45px;
+            color: map.get($colors, dark-blue);
+            line-height: 1;
+            margin-bottom: 26px;
+
+            span {
+                display: block;
+                font-weight: 600;
+                font-size: 24px;
+                color: map.get($colors, dark-blue);
+                margin-top: 22px;
+            }
+
+            @include respond-to(tablet) {
+                font-size: 36px;
+            }
+        }
+
+        &-innertext {
+            padding-right: 40px;
+            height: 308px;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 6px;
+                display: block;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: map.get($colors, border);
+                background-clip: padding-box;
+                border-radius: 10px;
+                border-left: 2px solid transparent;
+                border-right: 2px solid transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: map.get($colors, green);
+                border-radius: 10px;
+                min-height: 50px;
+            }
+        }
+
+        &-paragraph {
+            font-family: 'Lato', 'sans-serif';
+            font-weight: 500;
+            font-size: 16px;
+            color: map.get($colors, dark-blue);
+            line-height: 1.6;
+            margin-bottom: 26px;
+        }
+
+        &-rightside {
+            width: 100%;
+            max-width: 700px;
+            height: 472px;
+
+            @include respond-to(laptop-m) {
+                max-width: unset;
+            }
+
+            @include respond-to(tablet) {
+                height: 300px;
+
+                img {
+                    height: 300px;
+                }
+            }
+        }
+
+        &-swiper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            .swiper-controls {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .contacts {
+        padding: 70px 0 100px 0;
+    }
+}

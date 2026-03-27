@@ -3,29 +3,35 @@
 @use "@/scss/utils/vars.scss" as *;
 @use "@/scss/utils/mixins.scss" as *;
 
-@use "@/scss/partials/counter.scss";
-@use "./benefits.scss";
-
+@use "@/scss/base/fonts.scss";
 @use "@/scss/partials/header.scss";
 @use "@/scss/partials/hero.scss";
+@use "@/scss/partials/breadcrumbs.scss";
 @use "@/scss/partials/ui/logo.scss";
 @use "@/scss/partials/ui/button.scss";
-@use "@/scss/partials/ui/play-icon.scss";
-@use "@/scss/partials/ui/swiper-controls.scss";
-@use "@/scss/partials/ui/link.scss";
 @use "@/scss/partials/ui/product-card.scss";
-@use "@/scss/partials/products.scss";
-@use "@/scss/partials/manufacturer.scss";
 @use "@/scss/partials/product-card-modal.scss";
-@use "@/scss/partials/video-block.scss";
-@use "@/scss/partials/eco-hero.scss";
-@use "@/scss/partials/news.scss";
+@use "@/scss/partials/products.scss";
+@use "@/scss/partials/ui/swiper-controls.scss";
 @use "@/scss/partials/contacts.scss";
 @use "@/scss/partials/ui/socials.scss";
 @use "@/scss/partials/ui/social.scss";
 @use "@/scss/partials/footer.scss";
 
+@use "./catalog-info.scss";
+
 body {
     font-family: 'Raleway', sans-serif;
     position: relative;
+}
+
+.catalog__hero {
+    .hero__banner {
+        height: 300px;
+    }
+
+    .hero__title {
+        margin-bottom: 0;
+        margin-top: 32px;
+    }
 }
