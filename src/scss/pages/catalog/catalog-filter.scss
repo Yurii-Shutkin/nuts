@@ -1,0 +1,107 @@
+@use "sass:map";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+
+.catalog__filter {
+    padding: 70px 0 80px 0px;
+
+    &-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 17px;
+        color: map.get($colors, dark-blue);
+
+        &--price {
+            gap: 15px;
+        }
+
+    }
+
+    &-wrap {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media (max-width:1900px) {
+            justify-content: space-between;
+            gap: 30px;
+        }
+    }
+
+    &-icon {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            color: map.get($colors, grey);
+            cursor: pointer;
+
+            &:hover {
+                color: map.get($colors, green);
+                transition: color .3s ease;
+            }
+        }
+    }
+
+    &-multiselect {
+        width: 100%;
+
+        &--taste {
+            max-width: 283px;
+            margin-left: 75px;
+
+            @media (max-width:1900px) {
+                margin-left: 0;
+                max-width: unset;
+            }
+        }
+
+        &--weight {
+            max-width: 171px;
+            margin-left: 29px;
+            margin-right: 50px;
+
+            @media (max-width:1900px) {
+                margin-left: 0;
+                margin-right: 0;
+                max-width: unset;
+            }
+        }
+    }
+
+    &-reset-btn {
+        color: map.get($colors, grey);
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    &-reset-btn-wrap {
+        display: flex;
+        padding: 0 8px;
+        align-items: center;
+        gap: 10px;
+        margin-left: auto;
+
+        svg {
+            width: 12px;
+        }
+
+        @media (max-width:1900px) {
+            margin-left: 0;
+        }
+    }
+
+    &-btn-accept {
+        padding: 15px 38px;
+        margin-left: 163px;
+
+        @media (max-width:1900px) {
+            margin-left: 0;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="catalog__filter-wrap">
-        <div class="catalog__filter-title">
+        <div class="catalog__filter-label">
             Фильтр
             <div class="catalog__filter-icon">
                 <svg>
@@ -8,7 +8,7 @@
                 </svg>
             </div>
         </div>
-        <div class="form__multiselect catalog__filter-multiselect" id="multisilect">
+        <div class="form__multiselect catalog__filter-multiselect catalog__filter-multiselect--taste" id="multisilect">
             <div class="form__multiselect-wrapper">
                 <button type="button" class="form__multiselect-control">
                     <span class="form__multiselect-value">
@@ -59,8 +59,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="form__multiselect catalog__filter-multiselect" id="multisilect">
+        <div class="form__multiselect catalog__filter-multiselect catalog__filter-multiselect--weight" id="multisilect">
             <div class="form__multiselect-wrapper">
                 <button type="button" class="form__multiselect-control">
                     <span class="form__multiselect-value">
@@ -109,6 +108,26 @@
                     </label>
                 </div>
             </div>
+        </div>
+        <div class="catalog__filter-label catalog__filter-label--price">
+            Стоимость
+            <div class="catalog__filter-icon">
+                <svg>
+                    <use href="#icon-arrow-down"></use>
+                </svg>
+                <svg>
+                    <use href="#icon-arrow-up"></use>
+                </svg>
+            </div>
+        </div>
+        <button type="button" class="catalog__filter-btn-accept main-btn">Применить</button>
+        <div class="catalog__filter-reset-btn-wrap">
+            <div class="catalog__filter-icon">
+                <svg>
+                    <use href="#icon-close-button-2"></use>
+                </svg>
+            </div>
+            <button type="button" class="catalog__filter-reset-btn">Сбросить</button>
         </div>
     </div>
 </div>

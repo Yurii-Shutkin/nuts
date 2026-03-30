@@ -17,16 +17,22 @@
 @use "@/scss/partials/ui/socials.scss";
 @use "@/scss/partials/ui/social.scss";
 @use "@/scss/partials/footer.scss";
+@use "@/scss/partials/ui/form.scss";
 
 @use "./catalog-info.scss";
-@use "@/scss/partials/ui/form.scss";
+@use "./catalog-filter.scss";
 
 body {
     font-family: 'Raleway', sans-serif;
     position: relative;
 }
 
+.hero {
+    margin-bottom: 0;
+}
+
 .catalog__hero {
+
     .hero__banner {
         height: 300px;
     }
