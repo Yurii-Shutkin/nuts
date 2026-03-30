@@ -140,4 +140,150 @@
             }
         }
     }
+
+    &__multiselect {
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-control {
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid map.get($colors, border);
+            padding: 10px 17px;
+            font-size: 14px;
+            color: map.get($colors, dark-blue);
+            transition: border .3s ease,
+                background .3s ease;
+
+            &:hover {
+                background: map.get($colors, overlay-form);
+                transition: background .3s ease;
+            }
+
+            &--active {
+                border: 1px solid map.get($colors, salad);
+                background: #fff;
+                transition: border .3s ease,
+                    background .3s ease;
+
+                &:hover {
+                    background: #fff;
+                }
+            }
+        }
+
+        &-arrow {
+            width: 10px;
+            height: 5px;
+            transform: rotate(0deg);
+            transition: transform .3s ease;
+
+            svg {
+                color: map.get($colors, salad);
+                height: 8px;
+            }
+
+            &--active {
+                transform: rotate(180deg);
+                transition: transform .3s ease;
+            }
+        }
+
+        &-dropdown {
+            width: 100%;
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            flex-direction: column;
+            background: #fff;
+            border-bottom: 1px solid map.get($colors, border);
+            transition: opacity .3s ease;
+
+            &--active {
+                visibility: visible;
+                opacity: 1;
+                transition: opacity .3s ease;
+            }
+        }
+
+        &-option {
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+            display: block;
+            font-size: 14px;
+            color: map.get($colors, dark-blue);
+            text-align: left;
+            background: transparent;
+            flex-shrink: 0;
+            border-bottom: 1px solid map.get($colors, border);
+            border-left: 1px solid map.get($colors, border);
+            border-right: 1px solid map.get($colors, border);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                background: map.get($colors, overlay-form);
+                transition: background .3s ease;
+            }
+
+            &-checkmark {
+                display: none;
+                position: absolute;
+                right: 17px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 9px;
+                height: 9px;
+                color: #fff;
+            }
+
+            &-checkbox {
+                pointer-events: none;
+                position: absolute;
+                cursor: pointer;
+                width: 10px;
+                height: 10px;
+                border: 1px solid map.get($colors, green);
+                right: 17px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                &:checked {
+                    border: 1px solid map.get($colors, bg1);
+                }
+
+                &:checked~.form__multiselect-option-checkmark {
+                    display: block;
+                }
+            }
+
+            &-value {
+                cursor: pointer;
+                display: block;
+                padding: 10px 17px;
+                width: 100%;
+                height: 100%;
+            }
+
+            &--active {
+                background: map.get($colors, green);
+                transition: background .3s ease,
+                    color .3s ease;
+                color: #fff;
+                font-weight: 600;
+
+                &:hover {
+                    background: map.get($colors, green);
+                }
+            }
+        }
+    }
 }

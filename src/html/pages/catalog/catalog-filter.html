@@ -2,7 +2,7 @@
     <form action="" class="form">
         <input id="search" name="search" type="text" class="form__input" value="search" />
 
-        <div class="form__select">
+        <!-- <div class="form__select">
             <div class="form__select-wrapper">
                 <button type="button" class="form__select-control">
                     <span class="form__select-value">lol kek cheburek</span>
@@ -22,6 +22,53 @@
                     <button type="button" class="form__select-option">
                         value3
                     </button>
+                </div>
+            </div>
+        </div> -->
+        <div class="form__multiselect" id="multisilect">
+            <div class="form__multiselect-wrapper">
+                <button type="button" class="form__multiselect-control">
+                    <span class="form__multiselect-value">
+                        Вкус
+                    </span>
+                    <div class="form__multiselect-arrow">
+                        <svg>
+                            <use href="#icon-select-arrow"></use>
+                        </svg>
+                    </div>
+                </button>
+                <div class="form__multiselect-dropdown">
+                    <label type="button" class="form__multiselect-option">
+                        <span class="form__multiselect-option-value">
+                            Сладкий
+                        </span>
+                        <input class="form__multiselect-option-checkbox" type="checkbox" value="sweet" id="sweet">
+                        <svg class="form__multiselect-option-checkmark">
+                            <use href="#icon-checkmark"></use>
+                        </svg>
+                    </label>
+                    <label type="button" class="form__multiselect-option">
+                        <span class="form__multiselect-option-value">Кондитерский</span>
+                        <input class="form__multiselect-option-checkbox" type="checkbox" value="sweet"
+                            id="confectionery">
+                        <svg class="form__multiselect-option-checkmark">
+                            <use href="#icon-checkmark"></use>
+                        </svg>
+                    </label>
+                    <label type="button" class="form__multiselect-option">
+                        <span class="form__multiselect-option-value">Очищённый</span>
+                        <input class="form__multiselect-option-checkbox" type="checkbox" value="sweet" id="purified">
+                        <svg class="form__multiselect-option-checkmark">
+                            <use href="#icon-checkmark"></use>
+                        </svg>
+                    </label>
+                    <label type="button" class="form__multiselect-option">
+                        <span class="form__multiselect-option-value">Медовый</span>
+                        <input class="form__multiselect-option-checkbox" type="checkbox" value="sweet" id="honey">
+                        <svg class="form__multiselect-option-checkmark">
+                            <use href="#icon-checkmark"></use>
+                        </svg>
+                    </label>
                 </div>
             </div>
         </div>
