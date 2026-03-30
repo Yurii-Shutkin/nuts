@@ -84,6 +84,7 @@
         }
 
         &-dropdown {
+            position: relative;
             width: 100%;
             display: flex;
             opacity: 0;
@@ -139,6 +140,7 @@
 
     &__multiselect {
         &-wrapper {
+            position: relative;
             display: flex;
             flex-direction: column;
         }
@@ -191,6 +193,8 @@
         }
 
         &-dropdown {
+            position: absolute;
+            top: 39px;
             width: 100%;
             display: flex;
             opacity: 0;
@@ -199,6 +203,7 @@
             background: #fff;
             border-bottom: 1px solid map.get($colors, border);
             transition: opacity .3s ease;
+            z-index: 1;
 
             &--active {
                 visibility: visible;
