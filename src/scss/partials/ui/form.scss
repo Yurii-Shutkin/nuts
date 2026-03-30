@@ -122,10 +122,6 @@
                 transition: background .3s ease;
             }
 
-            &-id {
-                display: none;
-            }
-
             &--active {
                 background: map.get($colors, green);
                 padding: 10px 17px;
@@ -234,6 +230,28 @@
                 transition: background .3s ease;
             }
 
+            &:has(input:checked) {
+                background: map.get($colors, green);
+                transition: background .3s ease,
+                    color .3s ease;
+                color: #fff;
+                font-weight: 600;
+
+                &:hover {
+                    background: map.get($colors, green);
+                }
+            }
+
+            &-box {
+                position: absolute;
+                right: 17px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 9px;
+                height: 9px;
+                border: 1px solid map.get($colors, border);
+            }
+
             &-checkmark {
                 display: none;
                 position: absolute;
@@ -246,17 +264,16 @@
             }
 
             &-checkbox {
-                pointer-events: none;
                 position: absolute;
+                inset: 0;
                 cursor: pointer;
-                width: 10px;
-                height: 10px;
-                border: 1px solid map.get($colors, green);
+                width: 100%;
+                height: 100%;
                 right: 17px;
                 top: 50%;
                 transform: translateY(-50%);
 
-                &:checked {
+                &:checked~.form__multiselect-option-checkmark {
                     border: 1px solid map.get($colors, bg1);
                 }
 
@@ -271,18 +288,6 @@
                 padding: 10px 17px;
                 width: 100%;
                 height: 100%;
-            }
-
-            &--active {
-                background: map.get($colors, green);
-                transition: background .3s ease,
-                    color .3s ease;
-                color: #fff;
-                font-weight: 600;
-
-                &:hover {
-                    background: map.get($colors, green);
-                }
             }
         }
     }
