@@ -1,0 +1,62 @@
+@use "sass:map";
+@use "@/scss/utils/mixins.scss" as *;
+@use "@/scss/utils/vars.scss" as *;
+
+.product-card__search-icon {
+    position: absolute;
+    // opacity: 0;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    transition: opacity .3s ease;
+    z-index: 2;
+
+    &:hover {
+        .product-card__search-icon--outer {
+            border: 1px solid map.get($colors, green);
+            background: rgba(255, 255, 255, 0.75);
+            transition: background .3s ease;
+        }
+
+        .product-card__search-icon--inner {
+            background: none;
+            transition: background .3s ease;
+
+
+            svg {
+                color: map.get($colors, green);
+                transition: color .3s ease;
+            }
+        }
+    }
+
+    &--outer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 55px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        transition: background .3s ease;
+
+    }
+
+    &--inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        background: map.get($colors, salad);
+        border-radius: 50%;
+        transition: background .3s ease;
+
+        svg {
+            width: 19px;
+            height: 19px;
+            color: #fff;
+            transition: color .3s ease;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="product-info__wrap">
+        <div class="product-info__img-container">
+            <div class="product-info__swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide product-info__slide">
+                        <picture>
+                            <img src="/img/products/product-card-1.png" alt="Фото товара"
+                                class="product-info__img-item">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide product-info__slide">
+                        <picture>
+                            <img src="/img/products/product-card-7.png" alt="Фото товара"
+                                class="product-info__img-item">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="product-info__slider-arrows">
+                {{> partials/product-card-slider-arrows }}
+            </div>
+            <div class="product-info__search-icon">
+                {{> partials/product-card-search-icon }}
+            </div>
+        </div>
+        <div class="product-info__content">
+            <div class="product-info__head">
+                <span class="product-info__name">
+                    Грецкий орех
+                </span>
+                <span class="product-info__num">
+                    Арт: 0091
+                </span>
+            </div>
+            <div class="product-info__body">
+                <h2 class="product-info__title">
+                    Орех соленый кондитерский очищенный
+                </h2>
+                <div class="product-info__desc">
+                    <div class="product-info__desc-row">
+                        <span class="product-info__desc-title">
+                            Состав:
+                        </span>
+                        <span class="product-info__desc-desc">
+                            Ядро грецкого ореха, вымытого очищенного
+                            от кожуры, соль экстра (раствор 7%)
+                        </span>
+                    </div>
+                    <div class="product-info__desc-row">
+                        <span class="product-info__desc-title">
+                            Масса нетто:
+                        </span>
+                        <span class="product-info__desc-desc">
+                            40г.
+                        </span>
+                    </div>
+                    <div class="product-info__desc-row">
+                        <span class="product-info__desc-title">
+                            Энергетическая ценность:
+                        </span>
+                        <span class="product-info__desc-desc">
+                            654 Ккал.
+                        </span>
+                    </div>
+                    <div class="product-info__desc-row">
+                        <span class="product-info__desc-title">
+                            Срок годности:
+                        </span>
+                        <span class="product-info__desc-desc">
+                            12 месяцев, с даты расфасовки
+                            (указана на упаковке)
+                        </span>
+                    </div>
+                </div>
+                <div class="product-info__disclaimer">
+                    <div class="product-info__disclaimer-warn-icon">
+                        <svg>
+                            <use href="#icon-warning"></use>
+                        </svg>
+                    </div>
+                    <div class="product-info__disclaimer-text">
+                        <span>Хранить в помещениях, защищенных от попадания прямых,
+                            солнечных лучей, при температуре от +3 °C до +20 °C, и относительной
+                            влажности воздуха не более 75 %</span>
+                    </div>
+                </div>
+                <div class="product-info__price-wrap">
+                    <div class="product-info__price-text-block">
+                        <span class="product-info__price-label">
+                            Ваша цена:
+                        </span>
+                        <span class="product-info__price-current"><span>19</span> грн.</span>
+                        <span class="product-info__price-old">21 грн.</span>
+                    </div>
+                    <button type="button" class="product-info__order-btn main-btn">Заказать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

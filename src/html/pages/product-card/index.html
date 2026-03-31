@@ -1,11 +1,14 @@
 {{> partials/header }}
 
 <body>
-    <main class="paydel">
-        <section class="paydel__hero hero">
+    <main class="main">
+        <div class="container">
             {{> partials/breadcrumbs
             itemText1="Карточка товара" itemUrl1="/pages/product-card/index.html"
             }}
+        </div>
+        <section class="product-info">
+            {{> pages/product-card/product-info }}
         </section>
         <section class="contacts">
             {{> partials/contacts }}
