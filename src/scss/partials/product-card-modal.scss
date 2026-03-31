@@ -7,8 +7,11 @@
     &__modal {
         visibility: hidden;
         opacity: 0;
-        transition: visibility .3s ease,
-            opacity .3s ease;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
 
         &-wrap {
             position: fixed;
@@ -30,6 +33,7 @@
             bottom: 0;
             left: 0;
             background: map.get($colors, overlay);
+            z-index: 2;
         }
 
         &-img {
