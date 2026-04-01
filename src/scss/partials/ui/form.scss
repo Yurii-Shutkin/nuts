@@ -305,6 +305,33 @@
             }
         }
     }
+
+    &__title {
+        color: map.get($colors, dark-blue);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    &__link {
+        color: map.get($colors, green);
+        font-family: Montserrat;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+        }
+    }
+
+    &__button {
+        padding: 16px 0;
+        margin-bottom: 18px;
+    }
 }
 
 .form__checkbox-label {
@@ -406,18 +433,4 @@
     font-weight: 600;
     border-bottom: 2px dashed white;
     padding-bottom: 2px;
-}
-
-.fop-checkbox {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: #666;
-}
-
-.fop-checkbox input {
-    margin-right: 10px;
-    width: 18px;
-    height: 18px;
-    accent-color: #6a9e8b;
 }
