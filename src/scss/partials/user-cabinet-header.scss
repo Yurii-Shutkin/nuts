@@ -4,12 +4,11 @@
 
 .user-cabinet-header {
     display: flex;
-    align-items: baseline;
+    align-items: start;
     padding: 20px 0;
     gap: 191px;
 
     @include respond-to(laptop-m) {
-        align-items: start;
         row-gap: 20px;
         column-gap: 70px;
         flex-wrap: wrap;

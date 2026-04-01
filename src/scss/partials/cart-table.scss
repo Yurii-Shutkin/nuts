@@ -1,0 +1,134 @@
+@use "sass:map";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+
+.cart-table {
+    text-align: center;
+
+    &__wrap {
+        width: 100%;
+        padding: 30px 0 24px 0;
+
+        &-row {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            color: map.get($colors, dark-blue);
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            padding: 17px 25px;
+            border-bottom: 1px solid map.get($colors, border);
+
+            &:hover {
+                background: map.get($colors, overlay-form);
+            }
+        }
+    }
+
+    &__header {
+        background: map.get($colors, bg4);
+        line-height: 2;
+
+        &-title {
+            color: map.get($colors, dark-blue);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__continue-shopping-btn {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        width: 100%;
+        max-width: 250px;
+        color: map.get($colors, green);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        text-wrap: nowrap;
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &__summary {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+    }
+
+    &__result-sum {
+        &-text {
+            color: map.get($colors, dark-blue);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        &-amount {
+            color: map.get($colors, green);
+            font-family: Montserrat;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        &-currency {
+            color: map.get($colors, green);
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+        }
+    }
+
+    &__checkout-btn {
+        font-size: 16px;
+        font-weight: 700;
+        padding: 15px 59px;
+    }
+
+    .quantity-picker {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+
+        &__input {
+            text-align: center;
+            width: 44px;
+            height: 28px;
+            border: 1px solid map.get($colors, border);
+        }
+
+        &__button {
+            svg {
+                width: 15px;
+                height: 10px;
+                color: map.get($colors, grey);
+            }
+        }
+
+        &__minus {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.ta-l {
+    text-align: left;
+}
