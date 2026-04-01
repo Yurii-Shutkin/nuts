@@ -13,6 +13,11 @@
         .tabs__header-wrap {
             justify-content: center;
             gap: 132px;
+
+            @include respond-to(tablet-l) {
+                justify-content: unset;
+                gap: 80px;
+            }
         }
 
         .tabs__tab {
