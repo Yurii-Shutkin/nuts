@@ -1,0 +1,68 @@
+@use 'sass:map';
+@use "@/scss/utils/vars" as *;
+@use "@/scss/utils/mixins" as *;
+
+.sign-in__form {
+    width: 100%;
+    max-width: 410px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &-wrap {
+        padding: 20px 0 96px 0;
+    }
+
+    &-header {
+        margin-bottom: 40px;
+    }
+
+    &-input {
+        padding: 14px 0 14px 11px;
+        margin-bottom: 16px;
+    }
+
+    &-input::placeholder {
+        color: map.get($colors, dark-blue);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    &-title {
+        color: map.get($colors, dark-blue);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+        text-align: center;
+
+        @include respond-to(tablet) {
+            font-size: 27px;
+        }
+    }
+
+    &-link {
+        color: map.get($colors, green);
+        font-family: Montserrat;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 16px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2px;
+        }
+    }
+
+    &-button {
+        padding: 16px 0;
+        margin-bottom: 18px;
+    }
+}

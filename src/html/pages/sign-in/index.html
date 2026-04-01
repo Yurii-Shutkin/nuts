@@ -1,0 +1,24 @@
+{{> partials/header }}
+
+<body>
+    <main class="sing-in">
+        <div class="container">
+            {{> partials/breadcrumbs
+            itemText1="Вход" itemUrl1="/pages/sign-in/index.html"}}
+        </div>
+        <section>
+            <div class="container">
+                {{> pages/sign-in/sign-in-form }}
+            </div>
+        </section>
+        <section class="contacts">
+            {{> partials/contacts }}
+        </section>
+    </main>
+    <footer class="footer">
+        {{> partials/footer }}
+    </footer>
+    <script type="module" src="/src/js/pages/sign-in/main.js"></script>
+</body>
+
+</html>
