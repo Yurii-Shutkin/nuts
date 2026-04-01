@@ -1,0 +1,24 @@
+{{> partials/header }}
+
+<body>
+    <main class="password">
+        <div class="container">
+            {{> partials/breadcrumbs
+            itemText1="" itemUrl1="/pages/password-recovery/index.html"}}
+        </div>
+        <section>
+            <div class="container">
+                {{> pages/password-recovery/password-recovery-form }}
+            </div>
+        </section>
+        <section class="contacts">
+            {{> partials/contacts }}
+        </section>
+    </main>
+    <footer class="footer">
+        {{> partials/footer }}
+    </footer>
+    <script type="module" src="/src/js/pages/password-recovery/main.js"></script>
+</body>
+
+</html>
