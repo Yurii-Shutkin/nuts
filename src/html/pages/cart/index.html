@@ -1,0 +1,25 @@
+{{> partials/header }}
+
+<body>
+    <main class="cart">
+        <div class="container">
+            {{> partials/breadcrumbs
+            itemText1="Корзина" itemUrl1="/pages/cart/index.html"}}
+        </div>
+        <div class="section cart-header">
+            <div class="container">
+                {{> partials/user-cabinet-header
+                title='Корзина'}}
+            </div>
+        </div>
+        <section class="contacts">
+            {{> partials/contacts }}
+        </section>
+    </main>
+    <footer class="footer">
+        {{> partials/footer }}
+    </footer>
+    <script type="module" src="/src/js/pages/cart/main.js"></script>
+</body>
+
+</html>

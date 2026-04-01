@@ -1,0 +1,60 @@
+@use "sass:map";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+
+.user-cabinet-header {
+    display: flex;
+    align-items: baseline;
+    padding: 20px 0;
+    gap: 191px;
+
+    @include respond-to(laptop-m) {
+        align-items: start;
+        row-gap: 20px;
+        column-gap: 70px;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        color: map.get($colors, dark-blue);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+    }
+
+    &__manager-contact {
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &-text {
+            color: map.get($colors, dark-blue);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            color: map.get($colors, green);
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            gap: 8px;
+
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: 5px;
+                text-decoration-thickness: 2px;
+            }
+
+            svg {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}
