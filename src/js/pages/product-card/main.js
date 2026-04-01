@@ -3,6 +3,8 @@ import '@/js/partials/loadMap.js';
 import '@/js/partials/select.js';
 import '@/js/partials/burgerSide.js';
 import '@/js/partials/productCardSwiper.js';
+import '@/js/partials/tabsSwiper.js';
 import './productCardModal.js';
+
 
 

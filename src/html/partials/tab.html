@@ -1,9 +1,11 @@
 <div class="tabs__tab">
+    {{#if iconId}}
     <div class="tabs__tab-icon">
         <svg>
             <use href="{{iconId}}"></use>
         </svg>
     </div>
+    {{/if}}
     <div class="tabs__tab-title">
         {{title}}
     </div>

@@ -11,12 +11,14 @@
 @use "@/scss/partials/ui/product-card-slider-arrows.scss";
 @use "@/scss/partials/ui/product-card-search-icon.scss";
 @use "@/scss/partials/product-card-modal.scss";
+@use "@/scss/partials/ui/tabs.scss";
 @use "@/scss/partials/contacts.scss";
 @use "@/scss/partials/ui/socials.scss";
 @use "@/scss/partials/ui/social.scss";
 @use "@/scss/partials/footer.scss";
 
 @use "./product-info.scss";
+@use "./product-tabs.scss";
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -36,4 +38,13 @@ body {
             color: map.get($colors, grey);
         }
     }
+}
+
+.contacts {
+    background: map.get($colors, bg3);
+    padding-bottom: 89px;
+}
+
+.footer {
+    padding-top: 45px;
 }
