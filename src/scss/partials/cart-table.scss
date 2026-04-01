@@ -44,6 +44,12 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 60px;
+        gap: 55px;
+
+        @include respond-to (tablet-l) {
+            flex-wrap: wrap;
+            gap: 40px;
+        }
     }
 
     &__continue-shopping-btn {
@@ -58,6 +64,11 @@
         font-weight: 700;
         text-wrap: nowrap;
 
+        @include respond-to (tablet) {
+            justify-content: center;
+            max-width: unset;
+        }
+
         svg {
             width: 14px;
             height: 14px;
@@ -68,6 +79,19 @@
         display: flex;
         align-items: center;
         gap: 28px;
+
+        @include respond-to (tablet-l) {
+            flex-direction: row-reverse;
+            width: 100%;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        @include respond-to (tablet) {
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
 
     &__result-sum {
@@ -99,6 +123,11 @@
         font-size: 16px;
         font-weight: 700;
         padding: 15px 59px;
+
+        @include respond-to (tablet) {
+            margin-right: auto;
+            width: 100%;
+        }
     }
 
     .quantity-picker {
