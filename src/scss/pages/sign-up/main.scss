@@ -1,0 +1,46 @@
+@use "sass:map";
+@use "@/scss/reuse.scss";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+
+@use "@/scss/partials/header.scss";
+@use "@/scss/partials/hero.scss";
+@use "@/scss/partials/breadcrumbs.scss";
+@use "@/scss/partials/ui/logo.scss";
+@use "@/scss/partials/ui/button.scss";
+@use "@/scss/partials/ui/form.scss";
+@use "@/scss/partials/contacts.scss";
+@use "@/scss/partials/ui/socials.scss";
+@use "@/scss/partials/ui/social.scss";
+@use "@/scss/partials/footer.scss";
+
+@use './sign-up-form.scss';
+
+body {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+.breadcrumbs {
+    position: static;
+    padding: 35px 0;
+
+    &__link {
+        color: map.get($colors, grey);
+    }
+
+    &__arrow {
+        svg {
+            color: map.get($colors, grey);
+        }
+    }
+}
+
+.contacts {
+    background: map.get($colors, bg3);
+    padding-bottom: 89px;
+}
+
+.footer {
+    padding-top: 45px;
+}

@@ -15,6 +15,14 @@
         transition: background .3s ease;
         transition: border .3s ease;
 
+        &[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            padding: 0;
+            border: 1px solid map.get($colors, green);
+            margin-right: 10px;
+        }
+
         &:hover {
             background: map.get($colors, overlay-form);
             transition: background .3s ease;
@@ -297,4 +305,119 @@
             }
         }
     }
+}
+
+.form__checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.form__checkbox-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.form__checkbox-box {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #2e7d5b;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.form__checkbox-box::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    border-left: 2px solid #2e7d5b;
+    border-bottom: 2px solid #2e7d5b;
+    transform: rotate(-45deg);
+    top: 3px;
+    left: 3px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.form__checkbox-input:checked+.form__checkbox-box::after {
+    opacity: 1;
+}
+
+.form__checkbox-label:hover .form__checkbox-box {
+    border-color: #1f5a3f;
+}
+
+.form__checkbox-text {
+    font-size: 14px;
+    color: #333;
+}
+
+.form__checkbox-link {
+    color: map.get($colors, green);
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.profile-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    font-family: sans-serif;
+}
+
+.avatar-loader {
+    position: relative;
+    cursor: pointer;
+    display: block;
+
+    picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.hidden-input {
+    display: none;
+}
+
+.avatar-placeholder {
+    width: 131px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.upload-text {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    border-bottom: 2px dashed white;
+    padding-bottom: 2px;
+}
+
+.fop-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #666;
+}
+
+.fop-checkbox input {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: #6a9e8b;
 }

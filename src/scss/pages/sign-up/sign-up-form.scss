@@ -1,0 +1,130 @@
+@use 'sass:map';
+@use "@/scss/utils/vars" as *;
+@use "@/scss/utils/mixins" as *;
+
+.sign-up__form {
+    &-wrap {
+        padding: 9px 0 86px 0;
+    }
+
+    &-header {
+        margin-bottom: 24px;
+    }
+
+    &-title {
+        color: map.get($colors, dark-blue);
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 800;
+    }
+
+    &-body {
+        display: flex;
+        gap: 266px;
+
+        @include respond-to (laptop-m) {
+            gap: 60px;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    &-blocks {
+        margin-bottom: 22px;
+    }
+
+    &-block {
+        margin-bottom: 54px;
+    }
+
+    &-block:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &-leftside {
+        width: 100%;
+        max-width: 474px;
+
+        &-head {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 62px;
+
+            @include respond-to (tablet-l) {
+                gap: 40px;
+                flex-wrap: wrap;
+            }
+
+            &-btn {
+                display: block;
+                width: 100%;
+                color: map.get($colors, dark-blue);
+                font-family: Montserrat;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+
+        @include respond-to (tablet-l) {
+            max-width: unset;
+        }
+    }
+
+    &-subtitle {
+        color: map.get($colors, dark-blue);
+        font-family: Montserrat;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    &-group {
+        margin-bottom: 16px;
+    }
+
+    &-input {
+        padding: 14px 0 14px 17px;
+        line-height: 0;
+        margin-bottom: 0;
+
+        &::placeholder {
+            color: map.get($colors, dark-blue);
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+
+    &-checkbox {
+        margin-bottom: 28px;
+    }
+
+    &-rightside {
+        width: 100%;
+        margin-top: 60px;
+
+        @include respond-to (laptop-m) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &-button {
+        display: block;
+        padding: 15px 0;
+        width: 100%;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+    }
+}
+
+.avatar-loader {
+    margin-bottom: 6px;
+}
