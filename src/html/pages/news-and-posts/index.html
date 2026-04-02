@@ -4,7 +4,8 @@
     <main class="news-and-posts">
         <section>
             <div class="container">
-                {{> partials/breadcrumbs itemText1="Новости и статьи" itemUrl1="/pages/news-and-posts/index.html"}}
+                {{> partials/breadcrumbs itemText1="Новости и статьи" itemUrl1=(baseUrl
+                'pages/news-and-posts/index.html')}}
             </div>
         </section>
         <div class="container">
@@ -15,9 +16,9 @@
             <section class="news-and-posts__wrap">
                 {{> partials/news-hero}}
                 <div class="news-and-posts__small-wrap">
-                    {{> partials/news-card link="/pages/one-news/index.html"}}
-                    {{> partials/news-card link="/pages/one-news/index.html"}}
-                    {{> partials/news-card link="/pages/one-news/index.html"}}
+                    {{> partials/news-card link="/pages/one-news/"}}
+                    {{> partials/news-card link="/pages/one-news/"}}
+                    {{> partials/news-card link="/pages/one-news/"}}
                 </div>
             </section>
             <section class="video-card">
@@ -47,7 +48,8 @@
                         </div>
                     </div>
                 </div>
-                <a href="/pages/gallery/index.html" class="news-and-posts__btn transparent-btn">Посмотреть еще</a>
+                <a href="{{baseUrl 'pages/gallery/index.html'}}" class="news-and-posts__btn transparent-btn">Посмотреть
+                    еще</a>
             </section>
         </div>
         <section class="contacts">

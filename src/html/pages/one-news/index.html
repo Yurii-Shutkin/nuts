@@ -5,8 +5,8 @@
         <section>
             <div class="container">
                 {{> partials/breadcrumbs
-                itemText1="Новости и статьи" itemUrl1="/pages/news-and-posts/index.html"
-                itemText2="Статья" itemUrl1="/pages/one-news/index.html"}}
+                itemText1="Новости и статьи" itemUrl1=(baseUrl 'pages/news-and-posts/index.html')
+                itemText2="Статья" itemUrl1=(baseUrl 'pages/one-news/index.html')}}
             </div>
         </section>
         <section class="one-news__wrapper">

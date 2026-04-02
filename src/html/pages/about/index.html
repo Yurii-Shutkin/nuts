@@ -5,10 +5,10 @@
         <section class="about__hero hero">
             {{> partials/hero
             breadcrumbs=true
-            itemText1="О производстве" itemUrl1="/pages/about/index.html"
+            itemText1="О производстве" itemUrl1=(baseUrl 'pages/about/index.html')
             title="Орех Причерноморья"
             desc="Единственный в Украине сад совместного выращивание фундука и грецкого ореха"
-            imgSrc="/img/partials/hero/hero-2.png"
+            imgsrc="/img/partials/hero/hero-2.png"
             video=true
             }}
         </section>
@@ -23,7 +23,7 @@
         </section>
         <section class="gallery">
             {{> partials/gallery galleryHead = true }}
-            <a href="/pages/gallery/index.html" class="gallery__btn transparent-btn">
+            <a href="{{baseUrl 'pages/gallery/index.html'}}" class="gallery__btn transparent-btn">
                 Смотреть всю галерею
             </a>
         </section>

@@ -4,7 +4,7 @@
     <main class="cart">
         <div class="container">
             {{> partials/breadcrumbs
-            itemText1="Корзина" itemUrl1="/pages/cart/index.html"}}
+            itemText1="Корзина" itemUrl1=(baseUrl 'pages/about/index.html')}}
         </div>
         <div class="section cart-header">
             <div class="container">
@@ -16,7 +16,7 @@
             <div class="container">
                 {{> partials/cart-table
                 continueShopping=true
-                link='/pages/order/index.html'
+                link='/pages/order/'
                 }}
             </div>
         </section>

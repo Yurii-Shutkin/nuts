@@ -5,17 +5,17 @@
         <section class="hero">
             {{> partials/hero
             breadcrumbs=true
-            itemText1="Галерея" itemUrl1="/pages/gallery/index.html"
+            itemText1="Галерея" itemUrl1=(baseUrl 'pages/gllery/index.html')
             title="Галерея"
             desc="Кадры социальной активности компании"
-            imgSrc="/img/partials/hero/hero-6.png"
+            imgsrc="/img/partials/hero/hero-6.png"
             }}
         </section>
         <section class="gallery">
             <div class="gallery__inner">
                 {{> partials/gallery}}
                 {{> partials/gallery}}
-                <a href="/pages/gallery/index.html" class="gallery__btn transparent-btn">
+                <a href="{{baseUrl 'pages/gallery/index.html'}}" class="gallery__btn transparent-btn">
                     Посмотреть еще
                 </a>
             </div>
