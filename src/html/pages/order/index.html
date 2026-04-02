@@ -1,0 +1,30 @@
+{{> partials/header }}
+
+<body>
+    <main class="cart">
+        <div class="container">
+            {{> partials/breadcrumbs
+            itemText1="Оформление заказа" itemUrl1="/pages/order/index.html"}}
+        </div>
+        <div class="section cart-header">
+            <div class="container">
+                {{> partials/user-cabinet-header
+                title='Заказ №1245'}}
+            </div>
+        </div>
+        <section class="cart-table">
+            <div class="container">
+                {{> partials/cart-table}}
+            </div>
+        </section>
+        <section class="contacts">
+            {{> partials/contacts }}
+        </section>
+    </main>
+    <footer class="footer">
+        {{> partials/footer }}
+    </footer>
+    <script type="module" src="/src/js/pages/order/main.js"></script>
+</body>
+
+</html>

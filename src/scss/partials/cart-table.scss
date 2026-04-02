@@ -214,34 +214,6 @@
             width: 100%;
         }
     }
-
-    .quantity-picker {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 3px;
-
-        &__input {
-            text-align: center;
-            width: 44px;
-            height: 28px;
-            border: 1px solid map.get($colors, border);
-        }
-
-        &__button {
-            svg {
-                width: 15px;
-                height: 10px;
-                color: map.get($colors, grey);
-            }
-        }
-
-        &__minus {
-            svg {
-                transform: rotate(180deg);
-            }
-        }
-    }
 }
 
 .ta-l {

@@ -15,6 +15,7 @@
     }
 
     &__title {
+        font-family: 'Montserrat', 'sans-serif';
         color: map.get($colors, dark-blue);
         font-size: 32px;
         font-style: normal;
