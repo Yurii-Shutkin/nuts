@@ -5,7 +5,6 @@ import handlebars from 'vite-plugin-handlebars';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import { hulakPlugins } from 'vite-plugin-hulak-tools';
-import fs from 'fs'; 
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -81,6 +80,7 @@ export default defineConfig({
         cart: path.resolve(__dirname, "./pages/cart/index.html"),
         catalog: path.resolve(__dirname, "./pages/catalog/index.html"),
         gallery: path.resolve(__dirname, "./pages/gallery/index.html"),
+        checkout: path.resolve(__dirname, "./pages/checkout/index.html"),
         '404': path.resolve(__dirname, './404.html'),
         'payment-and-delivery': path.resolve(__dirname, "./pages/payment-and-delivery/index.html"),
         'corporate-clients': path.resolve(__dirname, "./pages/corporate-clients/index.html"),

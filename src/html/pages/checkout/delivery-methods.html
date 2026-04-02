@@ -1,0 +1,87 @@
+<div class="delivery-methods__wrap">
+    <form class="delivery-methods__form">
+        <div class="delivery-methods__form-block">
+            <h4 class="delivery-methods__form-block-title">
+                1. Контактные данные
+            </h4>
+            <div class="delivery-methods__form-block-inputs">
+                <div class="delivery-methods__form-group">
+                    <input type="text" id="name" name="name" aria-label="Имя"
+                        class="delivery-methods__form-input form__input" placeholder="ФИО*" required>
+                </div>
+                <div class="delivery-methods__form-group">
+                    <input type="email" id="email" name="email" aria-label="Email"
+                        class="delivery-methods__form-input form__input" placeholder="Email*" required>
+                </div>
+                <div class="delivery-methods__form-group">
+                    <input type="tel" id="phone" name="phone" aria-label="Телефон"
+                        class="delivery-methods__form-input form__input" placeholder="Телефон*" required>
+                </div>
+            </div>
+        </div>
+        <div class="delivery-methods__form-block">
+            <h4 class="delivery-methods__form-block-title">
+                2. Способ доставки
+            </h4>
+            <div class="delivery-methods__form-block-inputs">
+                <div class="delivery-methods__form-group">
+                    <input type="radio" name="delivery-method" id="nova-post"
+                        class="delivery-methods__form-radio-input form__radio-input">
+                    <label for="nova-post" class="delivery-methods__form-radio-label form__radio-label">Новая почта (по
+                        Украине оплата за счет Клиента)</label>
+                    <div class="content block-1">
+                        <div class="delivery-methods__form-block-inputs">
+                            <div class="delivery-methods__form-group">
+                                <input type="text" id="country" name="country" aria-label="Страна"
+                                    class="delivery-methods__form-input form__input" placeholder="Страна" required>
+                            </div>
+                            <div class="delivery-methods__form-group">
+                                <input type="text" id="region" name="region" aria-label="Область"
+                                    class="delivery-methods__form-input form__input" placeholder="Область" required>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="radio" name="delivery-method" id="courier"
+                        class="delivery-methods__form-radio-input form__radio-input">
+                    <label for="courier" class="delivery-methods__form-radio-label form__radio-label">Курьер по Одессе
+                    </label>
+                    <div class="content block-2">
+                        <div class="delivery-methods__form-block-inputs">
+                            <div class="delivery-methods__form-group">
+                                <input type="text" id="adress" name="adress" aria-label="Адрес"
+                                    class="delivery-methods__form-input form__input" placeholder="Адрес*" required>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="radio" name="delivery-method" id="pickup"
+                        class="delivery-methods__form-radio-input form__radio-input">
+                    <label for="pickup" class="delivery-methods__form-radio-label form__radio-label">Самовывоз со
+                        склада
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="delivery-methods__form-block">
+            <h4 class="delivery-methods__form-block-title">
+                3. Способ оплаты
+            </h4>
+            <div class="delivery-methods__form-block-inputs">
+                <div class="delivery-methods__form-group">
+                    <input type="radio" name="pay-method" id="no-cash"
+                        class="delivery-methods__form-radio-input form__radio-input">
+                    <label for="no-cash" class="delivery-methods__form-radio-label form__radio-label">Безналичный
+                        расчет</label>
+                    <input type="radio" name="pay-method" id="card"
+                        class="delivery-methods__form-radio-input form__radio-input">
+                    <label for="card" class="delivery-methods__form-radio-label form__radio-label">LiqPay / Приват24
+                    </label>
+                    <input type="radio" name="pay-method" id="cash"
+                        class="delivery-methods__form-radio-input form__radio-input">
+                    <label for="cash" class="delivery-methods__form-radio-label form__radio-label">Наличными при
+                        получении (Наложенным платежом)</label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="delivery-methods__form-btn main-btn">Продолжить</button>
+    </form>
+</div>

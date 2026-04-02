@@ -36,6 +36,50 @@
         }
     }
 
+    &__radio {
+        &-input {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+        }
+
+        &-label {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+            color: map.get($colors, dark-blue);
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 15px;
+                height: 15px;
+                border: 2px solid map.get($colors, green);
+                border-radius: 50%;
+                background: #fff;
+            }
+        }
+
+        &-input:checked+.form__radio-label::after {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 7px;
+            height: 7px;
+            background: map.get($colors, green);
+            border-radius: 50%;
+        }
+    }
+
     &__select {
         width: 100%;
 
