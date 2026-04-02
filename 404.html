@@ -1,0 +1,28 @@
+{{> partials/head title='Страница не найдена' link='/src/scss/pages/404/main.scss'}}
+
+<body>
+    {{> partials/header }}
+    <main>
+        <div class="not-found">
+            <div class="container">
+                <h1 class="masked-text">404</h1>
+                <span class="not-found__text">Страница не найдена</span>
+                <a href="{{baseUrl './index.html'}}" class="not-found__link transparent-btn">
+                    <svg>
+                        <use href="#icon-slider-arrow"></use>
+                    </svg>
+                    Вернуться на Главную страницу
+                </a>
+            </div>
+        </div>
+        <section class="contacts">
+            {{> partials/contacts }}
+        </section>
+    </main>
+    <footer class="footer">
+        {{> partials/footer }}
+    </footer>
+    <script type="module" src="/src/js/pages/404/main.js"></script>
+</body>
+
+</html>

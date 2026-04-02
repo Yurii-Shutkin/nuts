@@ -1,0 +1,82 @@
+@use "sass:map";
+@use "@/scss/reuse.scss";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+
+@use "@/scss/partials/header.scss";
+@use "@/scss/partials/ui/logo.scss";
+@use "@/scss/partials/ui/button.scss";
+@use "@/scss/partials/ui/link.scss";
+@use "@/scss/partials/contacts.scss";
+@use "@/scss/partials/ui/socials.scss";
+@use "@/scss/partials/ui/social.scss";
+@use "@/scss/partials/footer.scss";
+
+body {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+.masked-text {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('/img/partials/hero/hero-4.png');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 248px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 7px;
+    line-height: 1;
+
+    @include respond-to (tablet-l) {
+        font-size: 170px;
+    }
+
+    @include respond-to (mobile) {
+        font-size: 130px;
+    }
+}
+
+.not-found {
+    padding: 74px 0 91px 0;
+
+    @include respond-to (mobile) {
+        padding: 30px 0;
+    }
+
+    &__text {
+        display: block;
+        text-align: center;
+        color: map.get($colors, dark-blue);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        margin-bottom: 21px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        padding: 14px 24px;
+        max-width: 332px;
+        margin: 0 auto;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        text-wrap: nowrap;
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
+
+.footer {
+    padding-top: 53px;
+}

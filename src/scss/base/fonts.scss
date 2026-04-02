@@ -47,6 +47,14 @@
 }
 
 @font-face {
+    font-family: 'Montserrat';
+    src: url('@/assets/fonts/Montserrat/Montserrat-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Raleway';
     src: url('@/assets/fonts/Raleway/Raleway-Black.woff2') format('woff2');
     font-weight: 900;
