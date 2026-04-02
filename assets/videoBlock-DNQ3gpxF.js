@@ -1,0 +1,2 @@
+const t=document.querySelector(".video-block__play-icon"),e=document.querySelector(".video-block__content"),o=document.querySelector(".video-block__video"),c=document.querySelector(".video-block__video");t.addEventListener("click",()=>{o.classList.add("video-block__video--active"),e.style.display="none",c.play()});c.addEventListener("ended",()=>{o.classList.remove("video-block__video--active"),e.style.display="block"});
+//# sourceMappingURL=videoBlock-DNQ3gpxF.js.map

@@ -1,0 +1,2 @@
+const a=document.querySelectorAll(".gallery__card-play-icon");a.forEach(l=>{l.addEventListener("click",()=>{const t=l.closest(".gallery__card-video"),i=t.querySelector(".gallery__card-video-wrap video"),e=t.querySelector(".gallery__card-video-wrap");i.paused?(i.play(),e.style.opacity="1",e.style.visibility="visible"):(i.pause(),e.style.opacity="0",e.style.visibility="hidden"),i.addEventListener("ended",()=>{e.style.opacity="0",e.style.visibility="hidden"})})});
+//# sourceMappingURL=galleryVideoHandler-D6EPxhpv.js.map

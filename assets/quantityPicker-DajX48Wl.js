@@ -1,0 +1,2 @@
+const u=document.querySelectorAll(".quantity-picker");u.forEach(t=>{const n=t.querySelector(".quantity-picker__minus"),c=t.querySelector(".quantity-picker__plus"),e=t.querySelector(".quantity-picker__input");e.addEventListener("keydown",i=>{["e","E","+","-",".",","].includes(i.key)&&i.preventDefault()}),n.addEventListener("click",()=>{e.value>1&&+e.value--}),c.addEventListener("click",()=>{e.value++})});
+//# sourceMappingURL=quantityPicker-DajX48Wl.js.map
