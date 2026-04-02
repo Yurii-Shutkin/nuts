@@ -36,6 +36,20 @@ body {
     }
 }
 
+.user-cabinet-header {
+    gap: 108px;
+}
+
+.cart-table {
+    &__footer {
+        margin-bottom: 95px;
+    }
+
+    &__summary {
+        margin-left: auto;
+    }
+}
+
 .contacts {
     background: map.get($colors, bg3);
     padding-bottom: 89px;
