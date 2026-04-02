@@ -9,16 +9,19 @@
         <div class="section cart-header">
             <div class="container">
                 {{> partials/user-cabinet-header
-                title='Заказ №1245'}}
+                title='Заказ №1245'
+                }}
             </div>
         </div>
         <section class="cart-table">
             <div class="container">
-                {{> partials/cart-table}}
+                {{> partials/cart-table
+                link='/pages/order-redirect/index.html'
+                }}
             </div>
         </section>
         <section class="contacts">
-            {{> partials/contacts }}
+            {{> partials/contacts}}
         </section>
     </main>
     <footer class="footer">

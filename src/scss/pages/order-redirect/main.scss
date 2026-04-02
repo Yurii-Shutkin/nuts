@@ -1,0 +1,53 @@
+@use "sass:map";
+@use "@/scss/reuse.scss";
+@use "@/scss/utils/vars.scss" as *;
+@use "@/scss/utils/mixins.scss" as *;
+
+@use "@/scss/partials/header.scss";
+@use "@/scss/partials/hero.scss";
+@use "@/scss/partials/ui/logo.scss";
+@use "@/scss/partials/ui/button.scss";
+@use "@/scss/partials/contacts.scss";
+@use "@/scss/partials/ui/socials.scss";
+@use "@/scss/partials/ui/social.scss";
+@use "@/scss/partials/footer.scss";
+
+body {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+.hero {
+    margin-bottom: 0;
+
+    &__banner {
+        height: 518px;
+    }
+
+    &__content {
+        transform: translateY(-34%);
+    }
+
+    &__title {
+        font-size: 45px;
+        margin-bottom: 20px;
+
+        @include respond-to (mobile) {
+            font-size: 38px;
+        }
+    }
+
+    &__desc {
+        max-width: 450px;
+    }
+}
+
+.contacts {
+    background: map.get($colors, bg3);
+    padding-top: 102px;
+    padding-bottom: 89px;
+}
+
+.footer {
+    padding-top: 45px;
+}
