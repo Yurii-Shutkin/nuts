@@ -48,3 +48,28 @@ body {
 .footer {
     padding-top: 45px;
 }
+
+.product-toast {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 60;
+    padding: 12px 18px;
+    border-radius: 4px;
+    border: 1px solid map.get($colors, salad);
+    background: #fff;
+    color: map.get($colors, green);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

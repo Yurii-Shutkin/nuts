@@ -123,12 +123,23 @@
                     </div>
                 </div>
                 <div class="header__cart">
-                    <a class="header__cart-icon">
+                    <a href="{{baseUrl 'pages/cart/index.html'}}" class="header__cart-icon" data-count="0">
                         <svg>
                             <use href="#icon-cart">
                             </use>
                         </svg>
                     </a>
+                    <div class="header-cart-preview" data-header-cart-preview>
+                        <div class="header-cart-preview__items" data-header-cart-items></div>
+                        <div class="header-cart-preview__footer">
+                            <span class="header-cart-preview__total-label">
+                                Всего <span class="header-cart-preview__total-value" data-header-cart-total>0</span> грн.
+                            </span>
+                            <a href="{{baseUrl 'pages/cart/index.html'}}" class="header-cart-preview__go-cart main-btn">
+                                Перейти в корзину
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

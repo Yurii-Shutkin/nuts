@@ -9,13 +9,14 @@
 
             }}
         </div>
-        <div class="section cart-header">
+        <section class="section cart-header">
             <div class="container">
                 {{> partials/user-cabinet-header
                 title='Оформление заказа'
                 }}
             </div>
-        </div>
+        </section>
+
         <section class="cart-table">
             <div class="container">
                 {{> partials/cart-table
@@ -23,15 +24,18 @@
                 }}
             </div>
         </section>
+
         <section class="delivery-methods">
             <div class="container">
                 {{> pages/checkout/delivery-methods }}
             </div>
         </section>
+
         <section class="contacts">
             {{> partials/contacts}}
         </section>
     </main>
+
     <footer class="footer">
         {{> partials/footer }}
     </footer>

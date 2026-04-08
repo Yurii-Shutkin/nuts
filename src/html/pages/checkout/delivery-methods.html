@@ -1,5 +1,5 @@
 <div class="delivery-methods__wrap">
-    <form class="delivery-methods__form">
+    <form class="delivery-methods__form" novalidate>
         <div class="delivery-methods__form-block">
             <h4 class="delivery-methods__form-block-title">
                 1. Контактные данные
@@ -25,7 +25,7 @@
             </h4>
             <div class="delivery-methods__form-block-inputs">
                 <div class="delivery-methods__form-group">
-                    <input type="radio" name="delivery-method" id="nova-post"
+                    <input type="radio" name="delivery-method" id="nova-post" value="nova-post" required
                         class="delivery-methods__form-radio-input form__radio-input">
                     <label for="nova-post" class="delivery-methods__form-radio-label form__radio-label">Новая почта (по
                         Украине оплата за счет Клиента)</label>
@@ -33,27 +33,30 @@
                         <div class="delivery-methods__form-block-inputs">
                             <div class="delivery-methods__form-group">
                                 <input type="text" id="country" name="country" aria-label="Страна"
-                                    class="delivery-methods__form-input form__input" placeholder="Страна" required>
+                                    class="delivery-methods__form-input form__input" placeholder="Страна"
+                                    data-delivery-field="nova-post">
                             </div>
                             <div class="delivery-methods__form-group">
                                 <input type="text" id="region" name="region" aria-label="Область"
-                                    class="delivery-methods__form-input form__input" placeholder="Область" required>
+                                    class="delivery-methods__form-input form__input" placeholder="Область"
+                                    data-delivery-field="nova-post">
                             </div>
                         </div>
                     </div>
-                    <input type="radio" name="delivery-method" id="courier"
+                    <input type="radio" name="delivery-method" id="courier" value="courier"
                         class="delivery-methods__form-radio-input form__radio-input">
                     <label for="courier" class="delivery-methods__form-radio-label form__radio-label">Курьер по Одессе
                     </label>
                     <div class="content block-2">
                         <div class="delivery-methods__form-block-inputs">
                             <div class="delivery-methods__form-group">
-                                <input type="text" id="adress" name="adress" aria-label="Адрес"
-                                    class="delivery-methods__form-input form__input" placeholder="Адрес*" required>
+                                <input type="text" id="address" name="address" aria-label="Адрес"
+                                    class="delivery-methods__form-input form__input" placeholder="Адрес*"
+                                    data-delivery-field="courier">
                             </div>
                         </div>
                     </div>
-                    <input type="radio" name="delivery-method" id="pickup"
+                    <input type="radio" name="delivery-method" id="pickup" value="pickup"
                         class="delivery-methods__form-radio-input form__radio-input">
                     <label for="pickup" class="delivery-methods__form-radio-label form__radio-label">Самовывоз со
                         склада
@@ -67,15 +70,15 @@
             </h4>
             <div class="delivery-methods__form-block-inputs">
                 <div class="delivery-methods__form-group">
-                    <input type="radio" name="pay-method" id="no-cash"
+                    <input type="radio" name="pay-method" id="no-cash" value="no-cash" required
                         class="delivery-methods__form-radio-input form__radio-input">
                     <label for="no-cash" class="delivery-methods__form-radio-label form__radio-label">Безналичный
                         расчет</label>
-                    <input type="radio" name="pay-method" id="card"
+                    <input type="radio" name="pay-method" id="card" value="card"
                         class="delivery-methods__form-radio-input form__radio-input">
                     <label for="card" class="delivery-methods__form-radio-label form__radio-label">LiqPay / Приват24
                     </label>
-                    <input type="radio" name="pay-method" id="cash"
+                    <input type="radio" name="pay-method" id="cash" value="cash"
                         class="delivery-methods__form-radio-input form__radio-input">
                     <label for="cash" class="delivery-methods__form-radio-label form__radio-label">Наличными при
                         получении (Наложенным платежом)</label>
