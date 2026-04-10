@@ -1,6 +1,5 @@
 import Swiper from "swiper";
 import { Autoplay } from "swiper/modules";
-import 'swiper/css';
 
 const swiper = new Swiper('.eco-hero__swiper', {
   modules: [Autoplay],
