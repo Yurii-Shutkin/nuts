@@ -1,0 +1,2 @@
+import"./burgerSide-_98NqH6S.js";const r=document.querySelectorAll(".quantity-picker");r.forEach(t=>{const n=t.querySelector(".quantity-picker__minus"),c=t.querySelector(".quantity-picker__plus"),e=t.querySelector(".quantity-picker__input");e.addEventListener("keydown",i=>{["e","E","+","-",".",","].includes(i.key)&&i.preventDefault()}),n.addEventListener("click",()=>{e.value>1&&+e.value--}),c.addEventListener("click",()=>{e.value++})});
+//# sourceMappingURL=order-C9Y6lgLU.js.map
