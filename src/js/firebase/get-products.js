@@ -112,7 +112,7 @@ function normalizeProduct(rawProduct, docId) {
     composition: rawProduct.composition || '',
     energyValue: rawProduct.energyValue || 0,
     tasteTags: Array.isArray(rawProduct.tasteTags) ? rawProduct.tasteTags : [],
-    image: rawProduct.image || '/img/products/product-card-1.png',
+    image: rawProduct.image || './img/products/product-card-1.png',
     itemFlag: itemFlag !== 'basic',
     ...flagState,
   };
@@ -155,7 +155,7 @@ function bindOpenProduct(container) {
     if (!productId) {
       return;
     }
-    window.location.href = `/pages/product-card/index.html?id=${encodeURIComponent(productId)}`;
+    window.location.href = `./pages/product-card/index.html?id=${encodeURIComponent(productId)}`;
   });
 }
 
