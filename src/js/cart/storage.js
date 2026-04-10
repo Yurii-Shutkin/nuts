@@ -36,7 +36,7 @@ export function addToCart(product) {
       name: product.name,
       currentPrice: Number(product.currentPrice) || 0,
       weight: Number(product.weight) || 0,
-      image: product.image || '/img/products/product-card-1.png',
+      image: product.image || './img/products/product-card-1.png',
       quantity: 1,
     });
   }
