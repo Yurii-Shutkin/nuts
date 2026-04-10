@@ -2,6 +2,7 @@ import 'virtual:svg-icons-register';
 import '@/js/partials/loadMap.js';
 import '@/js/partials/select.js';
 import '@/js/partials/burgerSide.js';
+import './validate.js';
 import { initCartTable } from '@/js/cart/render-cart-table.js';
 import { clearCart, getCart, getCartTotal } from '@/js/cart/storage.js';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';

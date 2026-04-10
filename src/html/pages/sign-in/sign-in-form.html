@@ -4,11 +4,12 @@
     </div>
     <form class="sign-in__form">
         <label>
-            <input type="email" name="email" class="sign-in__form-input form__input" placeholder="Email" required>
+            <input type="email" name="email" class="sign-in__form-input form__input" placeholder="Email" id="email"
+                required>
         </label>
         <label>
             <input type="password" name="password" class="sign-in__form-input form__input" placeholder="Пароль"
-                required>
+                id="password" required>
         </label>
         <a href="{{baseUrl 'pages/password-recovery/index.html'}}" class="sign-in__form-link">Забыли пароль?</a>
         <button type="submit" class="sign-in__form-button main-btn">Войти</button>
