@@ -84,6 +84,7 @@
     }
 
     &-group {
+        position: relative;
         margin-bottom: 16px;
     }
 
@@ -103,6 +104,16 @@
 
     &-checkbox {
         margin-bottom: 28px;
+
+        .just-validate-error-label {
+            position: absolute;
+            top: 20px;
+            left: 8px;
+            background-color: #fff;
+            border-radius: 30px;
+            padding: 0 5px;
+            font-size: 12px;
+        }
     }
 
     &-rightside {

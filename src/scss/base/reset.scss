@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use '@/scss/utils/vars' as *;
+
 *,
 *::before,
 *::after {
@@ -22,6 +25,28 @@ body {
 
 main {
     display: block;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: inherit !important;
+    transition: background-color 9999s ease-in-out 0s;
+    border: 1px solid map.get($colors, border) !important;
+}
+
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+    -webkit-text-fill-color: inherit !important;
+    transition: background-color 9999s ease-in-out 0s;
+    border: 1px solid map.get($colors, green) !important;
+}
+
+input:-webkit-autofill:hover:not(:focus):not(:active) {
+    -webkit-box-shadow: 0 0 0 1000px map.get($colors, overlay-form) inset !important;
+    -webkit-text-fill-color: inherit !important;
+    transition: background-color 9999s ease-in-out 0s;
+    border: 1px solid map.get($colors, border) !important;
 }
 
 h1,

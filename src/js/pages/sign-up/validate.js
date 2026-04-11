@@ -5,18 +5,18 @@ const validation = new JustValidate('.sign-up__form');
 validation
   .addField('#name', [
     {
+      rule: 'required',
+      errorMessage: 'Введите ваше имя',
+    },
+    {
       rule: 'minLength',
       value: 2,
       errorMessage: 'Имя должно содержать минимум 2 символа',
     },
     {
       rule: 'maxLength',
-      value: 30,
-      errorMessage: 'Имя должно содержать максимум 30 символов',
-    },
-    {
-      rule: 'required',
-      errorMessage: 'Введите вашеимя',
+      value: 50,
+      errorMessage: 'Имя должно содержать максимум 50 символов',
     },
   ])
   .addField('#email', [
@@ -28,21 +28,28 @@ validation
       rule: 'email',
       errorMessage: 'Введите корректный email',
     },
-    {
-      rule: 'maxLength',
-      value: 30,
-    },
-  ]).addField('#tel', [
+  ])
+  .addField('#tel', [
     {
       rule: 'required',
       errorMessage: 'Введите ваш телефон',
     },
     {
-      rule: 'maxLength',
-      value: 12,
-      errorMessage: 'Телефон должен содержать максимум 12 символов',
+      rule: 'minLength',
+      value: 6,
+      errorMessage: 'Телефон должен содержать минимум 6 символов',
     },
-  ]).addField('#country', [
+    {
+      rule: 'maxLength',
+      value: 20,
+      errorMessage: 'Телефон должен содержать максимум 20 символов',
+    },
+  ])
+  .addField('#country', [
+    {
+      rule: 'required',
+      errorMessage: 'Укажите вашу страну',
+    },
     {
       rule: 'minLength',
       value: 2,
@@ -50,14 +57,15 @@ validation
     },
     {
       rule: 'maxLength',
-      value: 30,
-      errorMessage: 'Страна должна содержать максимум 30 символов',
+      value: 50,
+      errorMessage: 'Страна должна содержать максимум 50 символов',
     },
+  ])
+  .addField('#region', [
     {
       rule: 'required',
-      errorMessage: 'Укажите вашу страну',
+      errorMessage: 'Укажите вашу область',
     },
-  ]).addField('#region', [
     {
       rule: 'minLength',
       value: 2,
@@ -65,14 +73,15 @@ validation
     },
     {
       rule: 'maxLength',
-      value: 30,
-      errorMessage: 'Область должна содержать максимум 30 символов',
+      value: 50,
+      errorMessage: 'Область должна содержать максимум 50 символов',
     },
+  ])
+  .addField('#city', [
     {
       rule: 'required',
-      errorMessage: 'Укажите вашу область',
+      errorMessage: 'Укажите ваш город',
     },
-  ]).addField('#city', [
     {
       rule: 'minLength',
       value: 2,
@@ -80,14 +89,15 @@ validation
     },
     {
       rule: 'maxLength',
-      value: 30,
-      errorMessage: 'Город должен содержать максимум 30 символов',
+      value: 50,
+      errorMessage: 'Город должен содержать максимум 50 символов',
     },
+  ])
+  .addField('#adress', [
     {
       rule: 'required',
-      errorMessage: 'Укажите ваш город',
+      errorMessage: 'Укажите ваш адрес',
     },
-  ]).addField('#adress', [
     {
       rule: 'minLength',
       value: 2,
@@ -95,17 +105,14 @@ validation
     },
     {
       rule: 'maxLength',
-      value: 30,
-      errorMessage: 'Адрес должен содержать максимум 30 символов',
+      value: 150,
+      errorMessage: 'Адрес должен содержать максимум 150 символов',
     },
+  ])
+  .addField('#password', [
     {
       rule: 'required',
-      errorMessage: 'Укажите ваш адрес',
-    },
-  ]).addField('#password', [
-    {
-      rule: 'required',
-      errorMessage: 'Пароль обязателен',
+      errorMessage: 'Введите пароль',
     },
     {
       rule: 'minLength',
@@ -114,45 +121,76 @@ validation
     },
     {
       rule: 'maxLength',
-      value: 30,
-      errorMessage: 'Пароль должен содержать максимум 30 символов',
+      value: 50,
+      errorMessage: 'Пароль должен содержать максимум 50 символов',
     },
-    {
-      rule: 'required',
-      errorMessage: 'Укажите ваш пароль',
-    },
-  ]).addField('#confirm-password', [
+  ])
+  .addField('#confirm-password', [
     {
       rule: 'required',
       errorMessage: 'Повторите ваш пароль',
     },
     {
       validator: (value, fields) => {
+        if (!fields['#password'] || !fields['#password'].elem) {
+          return false;
+        }
         const passwordValue = fields['#password'].elem.value;
         return value === passwordValue;
       },
       errorMessage: 'Пароли не совпадают',
     },
-  ]).addField('#agreement', [
-  {
-    rule: 'required',
-    errorMessage: 'Вы должны согласиться с условиями',
-  },
-]).addField('#file', [
-  
-  {
-    rule: 'maxFilesCount',
-    value: 1,
-  },
-  {
-    rule: 'files',
-    value: {
-      files: {
-        extensions: ['jpeg', 'png'],
-        maxSize: 25000,
-        minSize: 1000,
-        types: ['image/jpeg', 'image/png'],
+  ])
+  .addField('#agreement', [
+    {
+      validator: (value) => {
+        return document.getElementById('agreement').checked;
       },
+      errorMessage: 'Вы должны согласиться с условиями',
     },
-  },
-]);
+  ])
+  .addField('#file', [
+    {
+      validator: (value) => {
+        const fileInput = document.getElementById('file');
+        const files = fileInput.files;
+
+        if (files.length === 0) {
+          return true;
+        }
+
+        if (files.length > 1) {
+          return false;
+        }
+        
+        const file = files[0];
+        const allowedExtensions = ['jpeg', 'jpg', 'png'];
+        const maxSize = 5242880; 
+        
+        const fileName = file.name.toLowerCase();
+        const hasValidExtension = allowedExtensions.some(ext => 
+          fileName.endsWith('.' + ext)
+        );
+        
+        if (!hasValidExtension) {
+          return false;
+        }
+        
+        if (file.size > maxSize) {
+          return false;
+        }
+        
+        return true;
+      },
+      errorMessage: 'Укажите корректный файл (JPEG, JPG или PNG, максимум 5MB)',
+    },
+  ])
+  .onSuccess((event) => {
+    event.preventDefault();
+    if (window.submitSignUpForm) {
+      window.submitSignUpForm();
+    }
+  })
+  .onFail(() => {
+    console.warn('Форма прошла валидацию неудачно');
+  });

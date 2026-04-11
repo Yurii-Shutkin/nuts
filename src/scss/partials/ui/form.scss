@@ -34,6 +34,10 @@
             transition: border .3s ease,
                 background .3s ease;
         }
+
+        &.just-validate-error-field {
+            border: 1px solid red;
+        }
     }
 
     &__radio {
@@ -477,4 +481,14 @@
     font-weight: 600;
     border-bottom: 2px dashed white;
     padding-bottom: 2px;
+}
+
+.just-validate-error-label {
+    position: absolute;
+    top: -7px;
+    left: 8px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 0 5px;
+    font-size: 12px;
 }
