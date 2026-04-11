@@ -1,6 +1,10 @@
 import Handlebars from 'handlebars';
 import { collection, doc, getDoc, getDocs } from 'firebase/firestore';
 import { db } from './firebase.js';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+
+Swiper.use([Navigation]);
 const baseUrl = import.meta.env.BASE_URL;
 
 const productTemplateSource = `
@@ -17,9 +21,20 @@ const productTemplateSource = `
       </div>
     </div>
     {{/if}}
-    <picture class="product-card__img">
-      <img src="{{image}}" alt="{{name}}" class="product-card__img">
-    </picture>
+    <div class="swiper product-card__swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <picture class="product-card__img">
+            <img src="{{image}}" alt="{{name}}" class="product-card__img">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture class="product-card__img">
+            <img src="{{imageAlt}}" alt="{{name}}" class="product-card__img">
+          </picture>
+        </div>
+      </div>
+    </div>
     <div class="product-card__search-icon">
       <div class="product-card__search-icon--outer">
         <div class="product-card__search-icon--inner">
@@ -94,6 +109,15 @@ const productTemplateSource = `
 
 const template = Handlebars.compile(productTemplateSource);
 
+function generateAltImage(imageUrl) {
+  const match = imageUrl.match(/^(.+?)(\d+)(\.\w+)$/);
+  if (match) {
+    const nextDigit = String(Number(match[2]) + 1);
+    return match[1] + nextDigit + match[3];
+  }
+  return imageUrl.replace(/(\.\w+)$/, '-alt$1');
+}
+
 function normalizeProduct(rawProduct, docId) {
   const id = rawProduct.id || docId;
   const itemFlag = rawProduct.itemFlag || 'basic';
@@ -103,6 +127,8 @@ function normalizeProduct(rawProduct, docId) {
     basic: { statusLabel: '', statusClass: '' },
   };
   const flagState = flagMap[itemFlag] || flagMap.basic;
+  const image = rawProduct.image || baseUrl + 'img/products/product-card-1.png';
+  const imageAlt = generateAltImage(image);
 
   return {
     id,
@@ -113,7 +139,8 @@ function normalizeProduct(rawProduct, docId) {
     composition: rawProduct.composition || '',
     energyValue: rawProduct.energyValue || 0,
     tasteTags: Array.isArray(rawProduct.tasteTags) ? rawProduct.tasteTags : [],
-    image: rawProduct.image || baseUrl + 'img/products/product-card-1.png',
+    image,
+    imageAlt,
     itemFlag: itemFlag !== 'basic',
     ...flagState,
   };
@@ -137,6 +164,28 @@ export async function fetchProductById(productId) {
   }
 
   return normalizeProduct(snapshot.data(), snapshot.id);
+}
+
+function initializeProductSwipers(container) {
+  const swipers = container.querySelectorAll('.product-card__swiper');
+  swipers.forEach((swiperEl) => {
+    const imgWrap = swiperEl.closest('.product-card__img-wrap');
+    const nextArrow = imgWrap?.querySelector('.product-card__slider-arrow--right');
+    const prevArrow = imgWrap?.querySelector('.product-card__slider-arrow--left');
+    
+    if (nextArrow && prevArrow) {
+      new Swiper(swiperEl, {
+        modules: [Navigation],
+        loop: true,
+        slidesPerView: 1,
+        allowTouchMove: true,
+        navigation: {
+          nextEl: nextArrow,
+          prevEl: prevArrow,
+        },
+      });
+    }
+  });
 }
 
 function bindOpenProduct(container) {
@@ -167,6 +216,7 @@ export function renderProductsFromList(container, products = []) {
 
   container.innerHTML = template({ products });
   bindOpenProduct(container);
+  initializeProductSwipers(container);
 }
 
 export async function renderProducts(container, options = {}) {

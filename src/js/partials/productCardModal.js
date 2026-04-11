@@ -11,17 +11,20 @@ if (modal && imgWrap && closeBtn && modalOverlay) {
       return;
     }
 
-    const parent = searchIcon.closest('.product-card__img-wrap');
-    const img = parent?.querySelector('.product-card__img');
+    const card = searchIcon.closest('.product-card');
+    const activeSlide = card?.querySelector('.product-card__swiper .swiper-slide-active');
+    const img = activeSlide?.querySelector('img') || card?.querySelector('.product-card__swiper img');
     if (!img) {
       return;
     }
 
     body.style.overflow = 'hidden';
-    const modalImage = img.cloneNode(true);
     imgWrap.innerHTML = '';
+    const modalImage = document.createElement('img');
+    modalImage.src = img.src;
+    modalImage.alt = img.alt || 'Фото товара';
+    modalImage.className = 'product-card__img-modal';
     imgWrap.appendChild(modalImage);
-    modalImage.classList.add('product-card__img-modal');
     modal.style.visibility = 'visible';
     modal.style.opacity = '1';
   });

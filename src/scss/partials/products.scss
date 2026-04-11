@@ -1,4 +1,6 @@
+@use "sass:map";
 @use "@/scss/utils/mixins.scss" as *;
+@use '../../../node_modules/swiper/swiper-bundle.min.css';
 
 .products {
     font-family: "Raleway", 'sans-serif';

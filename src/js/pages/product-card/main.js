@@ -45,6 +45,7 @@ function showAddedToCartToast() {
 
 function applyProductToPage(product) {
   const image = product.image || '/img/products/product-card-1.png';
+  const imageAlt = product.imageAlt || image;
   const mainImage = document.querySelector('[data-product-main-image]');
   const secondaryImage = document.querySelector('[data-product-secondary-image]');
   if (mainImage) {
@@ -52,7 +53,7 @@ function applyProductToPage(product) {
     mainImage.alt = product.name || 'Фото товара';
   }
   if (secondaryImage) {
-    secondaryImage.src = image;
+    secondaryImage.src = imageAlt;
     secondaryImage.alt = product.name || 'Фото товара';
   }
 
