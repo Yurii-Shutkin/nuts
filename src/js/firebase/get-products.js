@@ -1,6 +1,7 @@
 import Handlebars from 'handlebars';
 import { collection, doc, getDoc, getDocs } from 'firebase/firestore';
 import { db } from './firebase.js';
+const baseUrl = import.meta.env.BASE_URL;
 
 const productTemplateSource = `
 {{#each products}}
@@ -112,7 +113,7 @@ function normalizeProduct(rawProduct, docId) {
     composition: rawProduct.composition || '',
     energyValue: rawProduct.energyValue || 0,
     tasteTags: Array.isArray(rawProduct.tasteTags) ? rawProduct.tasteTags : [],
-    image: rawProduct.image || './img/products/product-card-1.png',
+    image: rawProduct.image || baseUrl + 'img/products/product-card-1.png',
     itemFlag: itemFlag !== 'basic',
     ...flagState,
   };
@@ -155,7 +156,7 @@ function bindOpenProduct(container) {
     if (!productId) {
       return;
     }
-    window.location.href = `./pages/product-card/index.html?id=${encodeURIComponent(productId)}`;
+    window.location.href = `${baseUrl}pages/product-card/index.html?id=${encodeURIComponent(productId)}`;
   });
 }
 

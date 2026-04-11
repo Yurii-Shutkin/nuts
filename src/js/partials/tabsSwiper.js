@@ -2,6 +2,7 @@ import Swiper from "swiper";
 
 const swiper = new Swiper('.tabs__swiper', {
   spaceBetween: 30,
+  autoHeight: true,
 });
 
   const tabs = document.querySelectorAll('.tabs__header-wrap .tabs__tab')

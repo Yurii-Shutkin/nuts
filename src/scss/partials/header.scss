@@ -30,6 +30,10 @@
 
             &-btn {
                 margin-left: 24px;
+
+                @include respond-to(mobile) {
+                    margin-left: 10px;
+                }
             }
 
             @include respond-to (laptop) {
@@ -320,13 +324,13 @@
 
 .header-cart-preview {
     position: absolute;
-    top: calc(100% + 14px);
-    right: -8px;
-    width: 440px;
-    max-width: min(440px, 96vw);
+    top: calc(100% + 32px);
+    right: -1px;
+    width: 467px;
+    max-width: min(467px, 96vw);
     border: 1px solid map.get($colors, green);
     background: #fff;
-    padding: 18px 22px 22px;
+    padding: 30px 25px 38px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(8px);
@@ -347,7 +351,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-bottom: 18px;
+        margin-bottom: 33px;
         padding-right: 4px;
     }
 
@@ -357,7 +361,7 @@
         align-items: center;
         gap: 12px;
         border-bottom: 1px solid map.get($colors, border);
-        padding-bottom: 9px;
+        padding-bottom: 14px;
     }
 
     &__name {
@@ -421,30 +425,29 @@
 
     &__remove {
         color: map.get($colors, grey);
-        font-size: 22px;
+        font-size: 33px;
         line-height: 1;
     }
 
     &__footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
+        padding-right: 4px;
+        text-align: right;
     }
 
     &__total-label {
-        font-size: 18px;
+        font-size: 19px;
         line-height: 1;
         font-weight: 700;
+        margin-right: 8px;
     }
 
     &__total-value {
         color: map.get($colors, green);
     }
 
-    &__go-cart {
+    &__go-cart.main-btn {
         white-space: nowrap;
-        padding: 12px 22px;
+        padding: 14px 20px;
         font-size: 16px;
     }
 

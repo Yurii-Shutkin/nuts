@@ -55,6 +55,8 @@ function renderRows() {
     return;
   }
 
+  const cartHeader = document.querySelector('.cart-table__header');
+
   const cartItems = getCart();
   if (!cartItems.length) {
     container.innerHTML = `
@@ -71,7 +73,7 @@ function renderRows() {
     return;
   }
 
-  container.innerHTML = cartItems.map(buildCartItemMarkup).join('');
+  container.innerHTML = cartHeader.innerHTML + cartItems.map(buildCartItemMarkup).join('');
   updateSummary();
 }
 

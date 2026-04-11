@@ -9,7 +9,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 40px;
+        gap: 50px;
 
         @include respond-to (laptop-m) {
             flex-wrap: wrap;
@@ -17,12 +17,9 @@
     }
 
     &__banner {
-        @include respond-to (laptop-m) {
+        width: 100%;
+        img {
             width: 100%;
-
-            img {
-                width: 100%;
-            }
         }
     }
 
