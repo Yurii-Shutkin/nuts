@@ -5,6 +5,78 @@
 .product-info {
     padding: 48px 0;
 
+    &.is-loading {
+        .product-info__wrap {
+            display: none;
+        }
+
+        .product-info__skeleton {
+            display: block;
+        }
+    }
+
+    &__skeleton {
+        display: none;
+
+        &-wrap {
+            display: flex;
+            gap: 76px;
+
+            @include respond-to(laptop-m) {
+                flex-wrap: wrap;
+            }
+        }
+
+        &-img {
+            position: relative;
+            width: 100%;
+            max-width: 553px;
+            height: 571px;
+            border: 1px solid map.get($colors, salad);
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include respond-to(laptop-m) {
+                max-width: unset;
+            }
+        }
+
+        &-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        &-body {
+            margin-top: 20px;
+        }
+
+        &-desc {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        &-disclaimer {
+            margin: 20px 0;
+        }
+
+        &-price {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
     &__wrap {
         display: flex;
         gap: 76px;
@@ -242,4 +314,53 @@
             margin: 0 auto;
         }
     }
+}
+
+.skeleton-pulse {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.skeleton-text {
+    height: 16px;
+    margin-bottom: 8px;
+
+    &--small {
+        width: 120px;
+        height: 14px;
+    }
+
+    &--medium {
+        width: 180px;
+        height: 18px;
+    }
+
+    &--large {
+        width: 300px;
+        height: 32px;
+        margin-bottom: 20px;
+    }
+
+    &--long {
+        width: 100%;
+        height: 40px;
+    }
+}
+
+.skeleton-button {
+    width: 140px;
+    height: 50px;
+    border-radius: 6px;
 }

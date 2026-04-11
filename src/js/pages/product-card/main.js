@@ -79,6 +79,13 @@ function applyProductToPage(product) {
   }
 }
 
+function showProductInfo() {
+  const productSection = document.querySelector('.product-info');
+  if (productSection) {
+    productSection.classList.remove('is-loading');
+  }
+}
+
 async function initProductPage() {
   try {
     const productId = getProductIdFromUrl();
@@ -94,8 +101,10 @@ async function initProductPage() {
     }
 
     applyProductToPage(product);
+    showProductInfo();
   } catch (error) {
     console.error('Ошибка загрузки карточки товара:', error);
+    showProductInfo();
   }
 }
 
