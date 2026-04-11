@@ -16,9 +16,16 @@ import { addProducts } from '../../firebase/add-products.js';
 
 const homeProductsGrid = document.querySelector('.products .products__grid');
 if (homeProductsGrid) {
-  renderProducts(homeProductsGrid, { limit: 6 }).catch((error) => {
-    console.error('Ошибка загрузки товаров на главной:', error);
-  });
+  homeProductsGrid.classList.add('is-loading');
+
+  renderProducts(homeProductsGrid, { limit: 6 })
+    .then(() => {
+      homeProductsGrid.classList.remove('is-loading');
+    })
+    .catch((error) => {
+      console.error('Ошибка загрузки товаров на главной:', error);
+      homeProductsGrid.classList.remove('is-loading');
+    });
 }
 
 // addProducts();

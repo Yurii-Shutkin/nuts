@@ -24,6 +24,8 @@ if (catalogProductsGrid && applyButton && resetButton) {
   let allProducts = [];
   let activeSort = null;
 
+  catalogProductsGrid.classList.add('is-loading');
+
   const getSelectedValues = (elements) =>
     [...elements].filter((item) => item.checked).map((item) => item.value);
 
@@ -78,8 +80,10 @@ if (catalogProductsGrid && applyButton && resetButton) {
     .then((products) => {
       allProducts = products;
       renderProductsFromList(catalogProductsGrid, allProducts);
+      catalogProductsGrid.classList.remove('is-loading');
     })
     .catch((error) => {
       console.error('Ошибка загрузки каталога:', error);
+      catalogProductsGrid.classList.remove('is-loading');
     });
 }
